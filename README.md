@@ -12,6 +12,7 @@ Nilead is built for:
 
 
 Nilead concentrates on User Experience, we want to build a shopping cart system for the mass. Nilead is inspired by other prjects:
+
 1. Shopify: for its business model, simple and user friendly design
 2. Sylius: for its usage of Symfony2 as its core, and for many parts of its implementation of the cart system
 3. Zencart, Magento, Prestashop, OpenCart, ... and many more
