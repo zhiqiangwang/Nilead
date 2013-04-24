@@ -1,5 +1,5 @@
 {
-    "name": "zepluf/standard-edition",
+    "name": "nilead/nilead",
     "description": "The \"NiLead Standard Edition\" distribution",
     "authors": [
         {
@@ -32,6 +32,8 @@
         "sylius/cart-bundle": "@dev",
         "sylius/assortment-bundle": "@dev",
         "sylius/resource-bundle": "@dev",
+        "sylius/taxonomies-bundle": "@dev",
+        "sylius/inventory-bundle": "@dev",
         "mathiasverraes/money": "@dev",
         "white-october/pagerfanta-bundle": "@dev",
         "pagerfanta/pagerfanta": "@dev",
@@ -61,7 +63,7 @@
         "symfony-app-dir": "app",
         "symfony-web-dir": "web",
         "branch-alias": {
-            "dev-master": "2.2-dev"
+            "dev-master": "0.1.x-dev"
         }
     }
 }
