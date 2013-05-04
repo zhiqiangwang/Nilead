@@ -42,7 +42,9 @@
         "pagerfanta/pagerfanta": "@dev",
         "nilead/core-bundle": "0.1.*@dev",
         "nilead/pricing-bundle": "@dev",
-        "nilead/payments-bundle": "@dev"
+        "nilead/payments-bundle": "@dev",
+        "nilead/shipments-bundle": "@dev",
+        "nilead/inventory-bundle": "@dev"
     },
     "scripts": {
         "post-install-cmd": [
