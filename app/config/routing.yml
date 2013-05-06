@@ -1,0 +1,50 @@
+nilead_contact:
+    resource: "@NileadContactBundle/Resources/config/routing.xml"
+    prefix:   /
+
+nilead_shipment:
+    resource: "@NileadShipmentsBundle/Resources/config/routing.xml"
+    prefix:   /store
+
+#craue_config_settings:
+#  resource: "@StoreBundle/Resources/config/routing/settings.xml"
+#  prefix: /settings
+#
+#craue_config_settings_modify:
+#  pattern: /settings/modify
+#  defaults:
+#    _controller: StoreBundle:Settings:modify
+#
+#craue_config_settings_section_modify:
+#  pattern: /settings/modify/{section}
+#  defaults:
+#    _controller: StoreBundle:Settings:sectionModify
+
+fos_user_security:
+    resource: "@FOSUserBundle/Resources/config/routing/security.xml"
+
+fos_user_profile:
+    resource: "@FOSUserBundle/Resources/config/routing/profile.xml"
+    prefix: /profile
+
+fos_user_group:
+    resource: "@FOSUserBundle/Resources/config/routing/group.xml"
+    prefix: /group
+
+fos_user_register:
+    resource: "@FOSUserBundle/Resources/config/routing/registration.xml"
+    prefix: /register
+
+fos_user_resetting:
+    resource: "@FOSUserBundle/Resources/config/routing/resetting.xml"
+    prefix: /resetting
+
+fos_user_change_password:
+    resource: "@FOSUserBundle/Resources/config/routing/change_password.xml"
+    prefix: /profile
+
+store_bundle_frontend_default_routes:
+    resource: "@NileadCoreBundle/Resources/config/routing/frontend.xml"
+    prefix: /store
+    requirements:
+          _locale: %locale%
