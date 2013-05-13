@@ -1,0 +1,24 @@
+nilead_shipments:
+    classes:
+        shipment:
+            model: Nilead\CoreBundle\Entity\Shipment
+        shipment_item:
+            model: Nilead\CoreBundle\Entity\ShipmentItem
+        picklist_item:
+            model: Nilead\CoreBundle\Entity\PicklistItem
+
+nilead_contact:
+    classes:
+        organization:
+            model: Nilead\CoreBundle\Entity\Organization
+        party:
+            model: Nilead\CoreBundle\Entity\Party
+        party_type:
+            model: Nilead\CoreBundle\Entity\PartyType
+
+nilead_inventory:
+    classes:
+        inventory_item:
+            model: Nilead\CoreBundle\Entity\InventoryItem
+        inventory_adjustment:
+            model: Nilead\CoreBundle\Entity\InventoryAdjustment
