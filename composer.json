@@ -23,8 +23,6 @@
         "sensio/distribution-bundle": "2.2.*",
         "sensio/framework-extra-bundle": "2.2.*",
         "sensio/generator-bundle": "2.2.*",
-        "jms/i18n-routing-bundle": "dev-master",
-        "jms/translation-bundle": "1.1.*@dev",
         "jms/security-extra-bundle": "1.4.*",
         "jms/di-extra-bundle": "1.3.*",
         "gedmo/doctrine-extensions": "2.3.*@dev",
@@ -32,7 +30,6 @@
 	    "nelmio/alice": "1.4.*@dev",
         "sylius/cart-bundle": "@dev",
         "sylius/money-bundle": "@dev",
-        "sylius/assortment-bundle": "@dev",
         "sylius/resource-bundle": "@dev",
         "sylius/taxonomies-bundle": "@dev",
         "sylius/inventory-bundle": "@dev",
@@ -46,7 +43,8 @@
         "nilead/pricing-bundle": "@dev",
         "nilead/payments-bundle": "@dev",
         "nilead/shipments-bundle": "@dev",
-        "nilead/inventory-bundle": "@dev"
+        "nilead/inventory-bundle": "@dev",
+        "nilead/product-bundle": "@dev"
     },
     "scripts": {
         "post-install-cmd": [
