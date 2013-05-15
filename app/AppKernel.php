@@ -11,6 +11,7 @@ class AppKernel extends Kernel
             //  Nilead
             new Sylius\Bundle\ResourceBundle\SyliusResourceBundle(),
             new Nilead\CoreBundle\NileadCoreBundle(),
+            new Nilead\WebBundle\NileadWebBundle(),
             new Nilead\ShipmentsBundle\NileadShipmentsBundle(),
             new Nilead\ContactBundle\NileadContactBundle(),
             new Nilead\PricingBundle\NileadPricingBundle(),
@@ -25,6 +26,7 @@ class AppKernel extends Kernel
             new Symfony\Bundle\SwiftmailerBundle\SwiftmailerBundle(),
             new Symfony\Bundle\TwigBundle\TwigBundle(),
 
+
             //  3rd party
             new Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle(),
             new JMS\AopBundle\JMSAopBundle(),
@@ -36,6 +38,9 @@ class AppKernel extends Kernel
             new FOS\RestBundle\FOSRestBundle(),
             new FOS\UserBundle\FOSUserBundle(),
             new Gregwar\CaptchaBundle\GregwarCaptchaBundle(),
+            new Knp\Bundle\MenuBundle\KnpMenuBundle(),
+
+            new Nilead\MenuBundle\NileadMenuBundle(),
 
         );
 

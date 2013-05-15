@@ -30,8 +30,8 @@ twig:
 # Assetic Configuration
 assetic:
     debug:          %kernel.debug%
-    use_controller: false
-    bundles:        [ NileadCoreBundle ]
+    use_controller: true
+#    bundles:        [ NileadCoreBundle ]
     #java: /usr/bin/java
     filters:
         cssrewrite: ~
@@ -57,14 +57,6 @@ doctrine:
     orm:
         auto_generate_proxy_classes: %kernel.debug%
         auto_mapping: true
-        # ....
-#        resolve_target_entities:
-#            Nilead\ShipmentsBundle\Model\ShipmentInterface: Nilead\CoreBundle\Entity\Shipment
-#            Nilead\ShipmentsBundle\Model\ShipmentItemInterface: Nilead\CoreBundle\Entity\ShipmentItem
-#            Nilead\ShipmentsBundle\Model\ShipmentRouteSegmentInterface: Nilead\ShipmentsBundle\Entity\ShipmentRouteSegment
-#            Nilead\ShipmentsBundle\Model\ShipmentStatusInterface: Nilead\ShipmentsBundle\Entity\ShipmentStatus
-#            Nilead\ShipmentsBundle\Model\ShipmentStatusTypeInterface: Nilead\ShipmentsBundle\Entity\ShipmentStatusType
-
 
 # Swiftmailer Configuration
 swiftmailer:

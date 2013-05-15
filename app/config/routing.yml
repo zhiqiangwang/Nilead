@@ -1,10 +1,6 @@
-nilead_contact:
-    resource: "@NileadContactBundle/Resources/config/routing.xml"
-    prefix:   /
-
-nilead_shipment:
-    resource: "@NileadShipmentsBundle/Resources/config/routing.xml"
-    prefix:   /store
+nilead_main:
+    resource: "@NileadWebBundle/Resources/config/routing/main.xml"
+    prefix:   /nilead
 
 #craue_config_settings:
 #  resource: "@StoreBundle/Resources/config/routing/settings.xml"
