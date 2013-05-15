@@ -1,6 +1,11 @@
 nilead_pricing:
-    driver: doctrine/orm
-    classes:
+  driver: doctrine/orm
+
+nilead_payments:
+  driver: doctrine/orm
+
+nilead_product:
+  driver: doctrine/orm	  
 
 nilead_shipments:
     driver: doctrine/orm
