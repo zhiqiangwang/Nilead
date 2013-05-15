@@ -1,4 +1,9 @@
+nilead_pricing:
+    driver: doctrine/orm
+    classes:
+
 nilead_shipments:
+    driver: doctrine/orm
     classes:
         shipment:
             model: Nilead\CoreBundle\Entity\Shipment
@@ -8,6 +13,7 @@ nilead_shipments:
             model: Nilead\CoreBundle\Entity\PicklistItem
 
 nilead_contact:
+    driver: doctrine/orm
     classes:
         organization:
             model: Nilead\CoreBundle\Entity\Organization
@@ -17,8 +23,19 @@ nilead_contact:
             model: Nilead\CoreBundle\Entity\PartyType
 
 nilead_inventory:
+    driver: doctrine/orm
     classes:
         inventory_item:
             model: Nilead\CoreBundle\Entity\InventoryItem
         inventory_adjustment:
             model: Nilead\CoreBundle\Entity\InventoryAdjustment
+
+sylius_resource:
+    resources:
+        nilead.user:
+            driver: doctrine/orm
+            classes:
+                model: Nilead\CoreBundle\Entity\User
+
+parameters:
+    nilead_shipments.manager.shipment.default.class:      Nilead\CoreBundle\Manager\ShipmentManager
