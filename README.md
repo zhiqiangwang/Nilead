@@ -55,4 +55,4 @@ Authors
 -------
 
 The bundle was originally created by [Raine Nguyen aka yellow1912](http://rubikin.com).
-See the list of [contributors](https://github.com/Nilead/Nilead/contributors).
+See the list of [contributors](https://github.com/Nilead/Nilead/CONTRIBUTORS.md).
