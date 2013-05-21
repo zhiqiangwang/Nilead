@@ -13,8 +13,11 @@ Projects that inspired us
 
 People that contributed to the project
 --------------------------------------
-
- - Vinh Quang Trinh: core team member 
+ 
+(Listed in alphabetical order)
+ 
  - Anh Tuan Nguyen Tran: core team member
+ - Vinh Quang Trinh: core team member 
+
 
     
