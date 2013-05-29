@@ -1,0 +1,82 @@
+Nilead\ProductBundle\Entity\Option\DefaultOptionvalue:
+  # Clothes Size
+  clothes_size_s:
+    id: 1
+    option: @clothes_size
+    value: S
+
+  clothes_size_m:
+    id: 2
+    option: @clothes_size
+    value: M
+
+  clothes_size_l:
+    id: 3
+    option: @clothes_size
+    value: L
+
+  clothes_size_xl:
+    id: 4
+    option: @clothes_size
+    value: XL
+
+  clothes_size_xxl:
+    id: 5
+    option: @clothes_size
+    value: XXL
+
+  # Clothes Color
+  clothes_color_den:
+    id: 6
+    option: @clothes_color
+    value: Đen
+
+  clothes_color_hoa_nen_den:
+    id: 7
+    option: @clothes_color
+    value: Hoa nền đen
+
+  clothes_color_hoa_nen_hong:
+    id: 8
+    option: @clothes_color
+    value: Hoa nền hồng
+
+  clothes_color_hong_phan:
+    id: 9
+    option: @clothes_color
+    value: Hồng phấn
+
+  clothes_color_kem:
+    id: 10
+    option: @clothes_color
+    value: Kem
+
+  clothes_color_trang:
+    id: 11
+    option: @clothes_color
+    value: Trắng
+
+  clothes_color_vang:
+    id: 12
+    option: @clothes_color
+    value: Vàng
+
+  clothes_color_xam:
+    id: 13
+    option: @clothes_color
+    value: Xám
+
+  clothes_color_xanh_aqua:
+    id: 14
+    option: @clothes_color
+    value: Xanh Aqua
+
+  clothes_color_xanh_coban:
+    id: 15
+    option: @clothes_color
+    value: Xanh Coban
+
+  clothes_color_xanh_duong:
+    id: 16
+    option: @clothes_color
+    value: Xanh Dương

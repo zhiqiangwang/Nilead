@@ -1,0 +1,180 @@
+Sylius\Bundle\TaxonomiesBundle\Entity\DefaultTaxon:
+  # Root
+  women:
+    id: 1
+    taxonomy: @category
+    parent: null
+    name: Women
+    slug: women
+
+  men:
+    id: 2
+    taxonomy: @category
+    parent: null
+    name: Men
+    slug: men
+
+  other:
+    id: 3
+    taxonomy: @category
+    parent: null
+    name: Other
+    slug: other
+
+  # Women
+  women_dresses:
+    id: 4
+    taxonomy: @category
+    parent: @women
+    name: Dresses
+    slug: dresses
+
+  women_shirts:
+    id: 5
+    taxonomy: @category
+    parent: @women
+    name: Shirts
+    slug: shirts
+
+  women_shoes:
+    id: 6
+    taxonomy: @category
+    parent: @women
+    name: Shoes
+    slug: shoes
+
+  women_bags_purses:
+    id: 7
+    taxonomy: @category
+    parent: @women
+    name: Bags &amp; Purses
+    slug: bags-purses
+
+  women_jackets_coats:
+    id: 8
+    taxonomy: @category
+    parent: @women
+    name: Jackets &amp; Coats
+    slug: jackets-coats
+
+  women_accessories:
+    id: 9
+    taxonomy: @category
+    parent: @women
+    name: Accessories
+    slug: accessories
+
+  # Men
+  men_accessories:
+    id: 10
+    taxonomy: @category
+    parent: @men
+    name: Accessories
+    slug: accessories
+
+  men_bags:
+    id: 11
+    taxonomy: @category
+    parent: @men
+    name: Bags
+    slug: bags
+
+  men_shirts:
+    id: 12
+    taxonomy: @category
+    parent: @men
+    name: Shirts
+    slug: shirts
+
+  men_jackets_coats:
+    id: 13
+    taxonomy: @category
+    parent: @men
+    name: Jackets &amp; Coats
+    slug: jackets-coats
+
+  men_jeans:
+    id: 14
+    taxonomy: @category
+    parent: @men
+    name: Jeans
+    slug: jeans
+
+  men_jumpers_cardigans:
+    id: 15
+    taxonomy: @category
+    parent: @men
+    name: Jumpers &amp; Cardigans
+    slug: jumpers-cardigans
+
+  men_leather_jackets:
+    id: 16
+    taxonomy: @category
+    parent: @men
+    name: Leather Jackets
+    slug: leather-jackets
+
+  men_shoes:
+    id: 17
+    taxonomy: @category
+    parent: @men
+    name: Shoes
+    slug: shoes
+
+  # Other
+  cell_phones:
+    id: 18
+    taxonomy: @category
+    parent: @other
+    name: Cell Phones
+    slug: cell-phones
+
+  cameras:
+    id: 19
+    taxonomy: @category
+    parent: @other
+    name: Cameras
+    slug: cameras
+
+  computers:
+    id: 20
+    taxonomy: @category
+    parent: @other
+    name: Computers
+    slug: computers
+
+  # Computers
+  laptops:
+    id: 21
+    taxonomy: @category
+    parent: @computers
+    name: Laptops
+    slug: laptops
+
+  processors:
+    id: 22
+    taxonomy: @category
+    parent: @computers
+    name: Processors
+    slug: processors
+
+  ram_memory:
+    id: 23
+    taxonomy: @category
+    parent: @computers
+    name: RAM / Memory
+    slug: ram-memory
+
+  cases:
+    id: 24
+    taxonomy: @category
+    parent: @computers
+    name: Cases
+    slug: cases
+
+  monitors:
+    id: 25
+    taxonomy: @category
+    parent: @computers
+    name: Monitors
+    slug: monitors

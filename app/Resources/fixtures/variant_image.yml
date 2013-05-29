@@ -1,0 +1,1176 @@
+Nilead\CoreBundle\Entity\Product\Variant\VariantImage:
+  # Master Variant
+  # Women ~> Dresses
+  variant_image_1:
+    variant: @variant_1
+    path: product-01-01.jpg
+
+  variant_image_2:
+    variant: @variant_1
+    path: product-01-02.jpg
+
+  variant_image_3:
+    variant: @variant_1
+    path: product-01-03.jpg
+
+  variant_image_4:
+    variant: @variant_1
+    path: product-01-04.jpg
+
+  variant_image_5:
+    variant: @variant_2
+    path: product-02-01.jpg
+
+  variant_image_6:
+    variant: @variant_2
+    path: product-02-02.jpg
+
+  variant_image_7:
+    variant: @variant_2
+    path: product-02-03.jpg
+
+  variant_image_8:
+    variant: @variant_2
+    path: product-02-04.jpg
+
+  variant_image_9:
+    variant: @variant_2
+    path: product-02-05.jpg
+
+  variant_image_10:
+    variant: @variant_2
+    path: product-02-06.jpg
+
+  variant_image_11:
+    variant: @variant_3
+    path: product-03-01.jpg
+
+  variant_image_12:
+    variant: @variant_3
+    path: product-03-02.jpg
+
+  variant_image_13:
+    variant: @variant_3
+    path: product-03-03.jpg
+
+  variant_image_14:
+    variant: @variant_3
+    path: product-03-04.jpg
+
+  variant_image_15:
+    variant: @variant_4
+    path: product-04-01.jpg
+
+  variant_image_16:
+    variant: @variant_4
+    path: product-04-02.jpg
+
+  variant_image_17:
+    variant: @variant_4
+    path: product-04-03.jpg
+
+  variant_image_18:
+    variant: @variant_4
+    path: product-04-04.jpg
+
+  variant_image_19:
+    variant: @variant_4
+    path: product-04-05.jpg
+
+  variant_image_20:
+    variant: @variant_4
+    path: product-04-06.jpg
+
+  variant_image_21:
+    variant: @variant_4
+    path: product-04-07.jpg
+
+  variant_image_22:
+    variant: @variant_5
+    path: product-05-01.jpg
+
+  variant_image_23:
+    variant: @variant_5
+    path: product-05-02.jpg
+
+  variant_image_24:
+    variant: @variant_5
+    path: product-05-03.jpg
+
+  variant_image_25:
+    variant: @variant_5
+    path: product-05-04.jpg
+
+  variant_image_26:
+    variant: @variant_5
+    path: product-05-05.jpg
+
+  variant_image_27:
+    variant: @variant_5
+    path: product-05-06.jpg
+
+  variant_image_28:
+    variant: @variant_5
+    path: product-05-07.jpg
+
+  variant_image_29:
+    variant: @variant_5
+    path: product-05-08.jpg
+
+  variant_image_30:
+    variant: @variant_5
+    path: product-05-09.jpg
+
+  variant_image_31:
+    variant: @variant_6
+    path: product-06-01.jpg
+
+  variant_image_32:
+    variant: @variant_6
+    path: product-06-02.jpg
+
+  variant_image_33:
+    variant: @variant_6
+    path: product-06-03.jpg
+
+  variant_image_34:
+    variant: @variant_6
+    path: product-06-04.jpg
+
+  variant_image_35:
+    variant: @variant_6
+    path: product-06-05.jpg
+
+  variant_image_36:
+    variant: @variant_6
+    path: product-06-06.jpg
+
+  variant_image_37:
+    variant: @variant_6
+    path: product-06-07.jpg
+
+  variant_image_38:
+    variant: @variant_6
+    path: product-06-08.jpg
+
+  variant_image_39:
+    variant: @variant_6
+    path: product-06-09.jpg
+
+  variant_image_40:
+    variant: @variant_6
+    path: product-06-10.jpg
+
+  variant_image_41:
+    variant: @variant_6
+    path: product-06-11.jpg
+
+  variant_image_42:
+    variant: @variant_6
+    path: product-06-12.jpg
+
+  variant_image_43:
+    variant: @variant_7
+    path: product-07-01.jpg
+
+  variant_image_44:
+    variant: @variant_7
+    path: product-07-02.jpg
+
+  variant_image_45:
+    variant: @variant_7
+    path: product-07-03.jpg
+
+  variant_image_46:
+    variant: @variant_7
+    path: product-07-04.jpg
+
+  variant_image_47:
+    variant: @variant_7
+    path: product-07-05.jpg
+
+  variant_image_48:
+    variant: @variant_7
+    path: product-07-06.jpg
+
+  variant_image_49:
+    variant: @variant_7
+    path: product-07-07.jpg
+
+  variant_image_50:
+    variant: @variant_7
+    path: product-07-08.jpg
+
+  variant_image_51:
+    variant: @variant_7
+    path: product-07-09.jpg
+
+  variant_image_52:
+    variant: @variant_8
+    path: product-08-01.jpg
+
+  variant_image_53:
+    variant: @variant_8
+    path: product-08-02.jpg
+
+  variant_image_54:
+    variant: @variant_8
+    path: product-08-03.jpg
+
+  variant_image_55:
+    variant: @variant_8
+    path: product-08-04.jpg
+
+  variant_image_56:
+    variant: @variant_8
+    path: product-08-05.jpg
+
+  variant_image_57:
+    variant: @variant_9
+    path: product-09-01.jpg
+
+  variant_image_58:
+    variant: @variant_9
+    path: product-09-02.jpg
+
+  variant_image_59:
+    variant: @variant_9
+    path: product-09-03.jpg
+
+  variant_image_60:
+    variant: @variant_9
+    path: product-09-04.jpg
+
+  variant_image_61:
+    variant: @variant_9
+    path: product-09-05.jpg
+
+  variant_image_62:
+    variant: @variant_9
+    path: product-09-06.jpg
+
+  variant_image_63:
+    variant: @variant_9
+    path: product-09-07.jpg
+
+  variant_image_64:
+    variant: @variant_10
+    path: product-10-01.jpg
+
+  variant_image_65:
+    variant: @variant_10
+    path: product-10-02.jpg
+
+  variant_image_66:
+    variant: @variant_10
+    path: product-10-03.jpg
+
+  variant_image_67:
+    variant: @variant_10
+    path: product-10-04.jpg
+
+  variant_image_68:
+    variant: @variant_11
+    path: product-11-01.jpg
+
+  variant_image_69:
+    variant: @variant_11
+    path: product-11-02.jpg
+
+  variant_image_70:
+    variant: @variant_11
+    path: product-11-03.jpg
+
+  variant_image_71:
+    variant: @variant_11
+    path: product-11-04.jpg
+
+  variant_image_72:
+    variant: @variant_12
+    path: product-12-01.jpg
+
+  variant_image_73:
+    variant: @variant_12
+    path: product-12-02.jpg
+
+  variant_image_74:
+    variant: @variant_12
+    path: product-12-03.jpg
+
+  variant_image_75:
+    variant: @variant_12
+    path: product-12-04.jpg
+
+  variant_image_76:
+    variant: @variant_12
+    path: product-12-05.jpg
+
+  variant_image_77:
+    variant: @variant_12
+    path: product-12-06.jpg
+
+
+  # Custome Variant
+  variant_image_78:
+    variant: @variant_13
+    path: product-01-01.jpg
+
+  variant_image_79:
+    variant: @variant_13
+    path: product-01-02.jpg
+
+  variant_image_80:
+    variant: @variant_13
+    path: product-01-03.jpg
+
+  variant_image_81:
+    variant: @variant_13
+    path: product-01-04.jpg
+
+  variant_image_82:
+    variant: @variant_14
+    path: product-01-01.jpg
+
+  variant_image_83:
+    variant: @variant_14
+    path: product-01-02.jpg
+
+  variant_image_84:
+    variant: @variant_14
+    path: product-01-03.jpg
+
+  variant_image_85:
+    variant: @variant_14
+    path: product-01-04.jpg
+
+  variant_image_86:
+    variant: @variant_15
+    path: product-02-01.jpg
+
+  variant_image_87:
+    variant: @variant_15
+    path: product-02-02.jpg
+
+  variant_image_88:
+    variant: @variant_15
+    path: product-02-03.jpg
+
+  variant_image_89:
+    variant: @variant_16
+    path: product-02-01.jpg
+
+  variant_image_90:
+    variant: @variant_16
+    path: product-02-02.jpg
+
+  variant_image_91:
+    variant: @variant_16
+    path: product-02-03.jpg
+
+  variant_image_92:
+    variant: @variant_17
+    path: product-02-04.jpg
+
+  variant_image_93:
+    variant: @variant_17
+    path: product-02-05.jpg
+
+  variant_image_94:
+    variant: @variant_17
+    path: product-02-06.jpg
+
+  variant_image_95:
+    variant: @variant_18
+    path: product-02-04.jpg
+
+  variant_image_96:
+    variant: @variant_18
+    path: product-02-05.jpg
+
+  variant_image_97:
+    variant: @variant_18
+    path: product-02-06.jpg
+
+  variant_image_98:
+    variant: @variant_19
+    path: product-03-01.jpg
+
+  variant_image_99:
+    variant: @variant_19
+    path: product-03-02.jpg
+
+  variant_image_100:
+    variant: @variant_20
+    path: product-03-01.jpg
+
+  variant_image_101:
+    variant: @variant_20
+    path: product-03-02.jpg
+
+  variant_image_102:
+    variant: @variant_21
+    path: product-03-01.jpg
+
+  variant_image_103:
+    variant: @variant_21
+    path: product-03-02.jpg
+
+  variant_image_104:
+    variant: @variant_22
+    path: product-03-01.jpg
+
+  variant_image_105:
+    variant: @variant_22
+    path: product-03-02.jpg
+
+  variant_image_106:
+    variant: @variant_23
+    path: product-03-01.jpg
+
+  variant_image_107:
+    variant: @variant_23
+    path: product-03-02.jpg
+
+  variant_image_108:
+    variant: @variant_24
+    path: product-03-03.jpg
+
+  variant_image_109:
+    variant: @variant_24
+    path: product-03-04.jpg
+
+  variant_image_110:
+    variant: @variant_25
+    path: product-03-03.jpg
+
+  variant_image_111:
+    variant: @variant_25
+    path: product-03-04.jpg
+
+  variant_image_112:
+    variant: @variant_26
+    path: product-03-03.jpg
+
+  variant_image_113:
+    variant: @variant_26
+    path: product-03-04.jpg
+
+  variant_image_114:
+    variant: @variant_27
+    path: product-03-03.jpg
+
+  variant_image_115:
+    variant: @variant_27
+    path: product-03-04.jpg
+
+  variant_image_116:
+    variant: @variant_28
+    path: product-03-03.jpg
+
+  variant_image_117:
+    variant: @variant_28
+    path: product-03-04.jpg
+
+  variant_image_118:
+    variant: @variant_29
+    path: product-04-01.jpg
+
+  variant_image_119:
+    variant: @variant_29
+    path: product-04-02.jpg
+
+  variant_image_120:
+    variant: @variant_29
+    path: product-04-03.jpg
+
+  variant_image_121:
+    variant: @variant_30
+    path: product-04-01.jpg
+
+  variant_image_122:
+    variant: @variant_30
+    path: product-04-02.jpg
+
+  variant_image_123:
+    variant: @variant_30
+    path: product-04-03.jpg
+
+  variant_image_124:
+    variant: @variant_31
+    path: product-04-01.jpg
+
+  variant_image_125:
+    variant: @variant_31
+    path: product-04-02.jpg
+
+  variant_image_126:
+    variant: @variant_31
+    path: product-04-03.jpg
+
+  variant_image_127:
+    variant: @variant_32
+    path: product-04-04.jpg
+
+  variant_image_128:
+    variant: @variant_32
+    path: product-04-05.jpg
+
+  variant_image_129:
+    variant: @variant_32
+    path: product-04-06.jpg
+
+  variant_image_130:
+    variant: @variant_32
+    path: product-04-07.jpg
+
+  variant_image_131:
+    variant: @variant_33
+    path: product-04-04.jpg
+
+  variant_image_132:
+    variant: @variant_33
+    path: product-04-05.jpg
+
+  variant_image_133:
+    variant: @variant_33
+    path: product-04-06.jpg
+
+  variant_image_134:
+    variant: @variant_33
+    path: product-04-07.jpg
+
+  variant_image_135:
+    variant: @variant_34
+    path: product-05-01.jpg
+
+  variant_image_136:
+    variant: @variant_34
+    path: product-05-02.jpg
+
+  variant_image_137:
+    variant: @variant_35
+    path: product-05-03.jpg
+
+  variant_image_138:
+    variant: @variant_35
+    path: product-05-04.jpg
+
+  variant_image_139:
+    variant: @variant_36
+    path: product-05-03.jpg
+
+  variant_image_140:
+    variant: @variant_36
+    path: product-05-04.jpg
+
+  variant_image_141:
+    variant: @variant_37
+    path: product-05-03.jpg
+
+  variant_image_142:
+    variant: @variant_37
+    path: product-05-04.jpg
+
+  variant_image_143:
+    variant: @variant_38
+    path: product-05-05.jpg
+
+  variant_image_144:
+    variant: @variant_38
+    path: product-05-06.jpg
+
+  variant_image_145:
+    variant: @variant_38
+    path: product-05-07.jpg
+
+  variant_image_146:
+    variant: @variant_38
+    path: product-05-08.jpg
+
+  variant_image_147:
+    variant: @variant_38
+    path: product-05-09.jpg
+
+  variant_image_148:
+    variant: @variant_39
+    path: product-05-05.jpg
+
+  variant_image_149:
+    variant: @variant_39
+    path: product-05-06.jpg
+
+  variant_image_150:
+    variant: @variant_39
+    path: product-05-07.jpg
+
+  variant_image_151:
+    variant: @variant_39
+    path: product-05-08.jpg
+
+  variant_image_152:
+    variant: @variant_39
+    path: product-05-09.jpg
+
+  variant_image_153:
+    variant: @variant_40
+    path: product-05-05.jpg
+
+  variant_image_154:
+    variant: @variant_40
+    path: product-05-06.jpg
+
+  variant_image_155:
+    variant: @variant_40
+    path: product-05-07.jpg
+
+  variant_image_156:
+    variant: @variant_40
+    path: product-05-08.jpg
+
+  variant_image_157:
+    variant: @variant_40
+    path: product-05-09.jpg
+
+  variant_image_158:
+    variant: @variant_41
+    path: product-06-01.jpg
+
+  variant_image_159:
+    variant: @variant_41
+    path: product-06-02.jpg
+
+  variant_image_160:
+    variant: @variant_41
+    path: product-06-03.jpg
+
+  variant_image_161:
+    variant: @variant_41
+    path: product-06-04.jpg
+
+  variant_image_162:
+    variant: @variant_41
+    path: product-06-05.jpg
+
+  variant_image_163:
+    variant: @variant_41
+    path: product-06-06.jpg
+
+  variant_image_164:
+    variant: @variant_41
+    path: product-06-07.jpg
+
+  variant_image_165:
+    variant: @variant_41
+    path: product-06-08.jpg
+
+  variant_image_166:
+    variant: @variant_41
+    path: product-06-09.jpg
+
+  variant_image_167:
+    variant: @variant_41
+    path: product-06-10.jpg
+
+  variant_image_168:
+    variant: @variant_41
+    path: product-06-11.jpg
+
+  variant_image_169:
+    variant: @variant_41
+    path: product-06-12.jpg
+
+  variant_image_170:
+    variant: @variant_42
+    path: product-06-01.jpg
+
+  variant_image_171:
+    variant: @variant_42
+    path: product-06-02.jpg
+
+  variant_image_172:
+    variant: @variant_42
+    path: product-06-03.jpg
+
+  variant_image_173:
+    variant: @variant_42
+    path: product-06-04.jpg
+
+  variant_image_174:
+    variant: @variant_42
+    path: product-06-05.jpg
+
+  variant_image_175:
+    variant: @variant_42
+    path: product-06-06.jpg
+
+  variant_image_176:
+    variant: @variant_42
+    path: product-06-07.jpg
+
+  variant_image_177:
+    variant: @variant_42
+    path: product-06-08.jpg
+
+  variant_image_178:
+    variant: @variant_42
+    path: product-06-09.jpg
+
+  variant_image_179:
+    variant: @variant_42
+    path: product-06-10.jpg
+
+  variant_image_180:
+    variant: @variant_42
+    path: product-06-11.jpg
+
+  variant_image_181:
+    variant: @variant_42
+    path: product-06-12.jpg
+
+  variant_image_182:
+    variant: @variant_43
+    path: product-06-01.jpg
+
+  variant_image_183:
+    variant: @variant_43
+    path: product-06-02.jpg
+
+  variant_image_184:
+    variant: @variant_43
+    path: product-06-03.jpg
+
+  variant_image_185:
+    variant: @variant_43
+    path: product-06-04.jpg
+
+  variant_image_186:
+    variant: @variant_43
+    path: product-06-05.jpg
+
+  variant_image_187:
+    variant: @variant_43
+    path: product-06-06.jpg
+
+  variant_image_188:
+    variant: @variant_43
+    path: product-06-07.jpg
+
+  variant_image_189:
+    variant: @variant_43
+    path: product-06-08.jpg
+
+  variant_image_190:
+    variant: @variant_43
+    path: product-06-09.jpg
+
+  variant_image_191:
+    variant: @variant_43
+    path: product-06-10.jpg
+
+  variant_image_192:
+    variant: @variant_43
+    path: product-06-11.jpg
+
+  variant_image_193:
+    variant: @variant_43
+    path: product-06-12.jpg
+
+  variant_image_194:
+    variant: @variant_44
+    path: product-07-01.jpg
+
+  variant_image_195:
+    variant: @variant_44
+    path: product-07-02.jpg
+
+  variant_image_196:
+    variant: @variant_44
+    path: product-07-03.jpg
+
+  variant_image_197:
+    variant: @variant_44
+    path: product-07-04.jpg
+
+  variant_image_198:
+    variant: @variant_45
+    path: product-07-01.jpg
+
+  variant_image_199:
+    variant: @variant_45
+    path: product-07-02.jpg
+
+  variant_image_200:
+    variant: @variant_45
+    path: product-07-03.jpg
+
+  variant_image_201:
+    variant: @variant_45
+    path: product-07-04.jpg
+
+  variant_image_202:
+    variant: @variant_46
+    path: product-07-08.jpg
+
+  variant_image_203:
+    variant: @variant_46
+    path: product-07-09.jpg
+
+  variant_image_204:
+    variant: @variant_47
+    path: product-07-08.jpg
+
+  variant_image_205:
+    variant: @variant_47
+    path: product-07-09.jpg
+
+  variant_image_206:
+    variant: @variant_48
+    path: product-07-05.jpg
+
+  variant_image_207:
+    variant: @variant_48
+    path: product-07-06.jpg
+
+  variant_image_208:
+    variant: @variant_48
+    path: product-07-07.jpg
+
+  variant_image_209:
+    variant: @variant_49
+    path: product-07-05.jpg
+
+  variant_image_210:
+    variant: @variant_49
+    path: product-07-06.jpg
+
+  variant_image_211:
+    variant: @variant_49
+    path: product-07-07.jpg
+
+  variant_image_212:
+    variant: @variant_50
+    path: product-07-05.jpg
+
+  variant_image_213:
+    variant: @variant_50
+    path: product-07-06.jpg
+
+  variant_image_214:
+    variant: @variant_50
+    path: product-07-07.jpg
+
+  variant_image_215:
+    variant: @variant_51
+    path: product-99-01.jpg
+
+  variant_image_216:
+    variant: @variant_52
+    path: product-99-01.jpg
+
+  variant_image_217:
+    variant: @variant_53
+    path: product-99-01.jpg
+
+  variant_image_218:
+    variant: @variant_54
+    path: product-08-01.jpg
+
+  variant_image_219:
+    variant: @variant_54
+    path: product-08-02.jpg
+
+  variant_image_220:
+    variant: @variant_54
+    path: product-08-03.jpg
+
+  variant_image_221:
+    variant: @variant_54
+    path: product-08-04.jpg
+
+  variant_image_222:
+    variant: @variant_54
+    path: product-08-05.jpg
+
+  variant_image_223:
+    variant: @variant_55
+    path: product-08-01.jpg
+
+  variant_image_224:
+    variant: @variant_55
+    path: product-08-02.jpg
+
+  variant_image_225:
+    variant: @variant_55
+    path: product-08-03.jpg
+
+  variant_image_226:
+    variant: @variant_55
+    path: product-08-04.jpg
+
+  variant_image_227:
+    variant: @variant_55
+    path: product-08-05.jpg
+
+  variant_image_228:
+    variant: @variant_56
+    path: product-08-01.jpg
+
+  variant_image_229:
+    variant: @variant_56
+    path: product-08-02.jpg
+
+  variant_image_230:
+    variant: @variant_56
+    path: product-08-03.jpg
+
+  variant_image_231:
+    variant: @variant_56
+    path: product-08-04.jpg
+
+  variant_image_232:
+    variant: @variant_56
+    path: product-08-05.jpg
+
+  variant_image_233:
+    variant: @variant_57
+    path: product-08-01.jpg
+
+  variant_image_234:
+    variant: @variant_57
+    path: product-08-02.jpg
+
+  variant_image_235:
+    variant: @variant_57
+    path: product-08-03.jpg
+
+  variant_image_236:
+    variant: @variant_57
+    path: product-08-04.jpg
+
+  variant_image_237:
+    variant: @variant_57
+    path: product-08-05.jpg
+
+  variant_image_238:
+    variant: @variant_58
+    path: product-09-01.jpg
+
+  variant_image_239:
+    variant: @variant_58
+    path: product-09-02.jpg
+
+  variant_image_240:
+    variant: @variant_58
+    path: product-09-03.jpg
+
+  variant_image_241:
+    variant: @variant_58
+    path: product-09-04.jpg
+
+  variant_image_242:
+    variant: @variant_58
+    path: product-09-05.jpg
+
+  variant_image_243:
+    variant: @variant_58
+    path: product-09-06.jpg
+
+  variant_image_244:
+    variant: @variant_58
+    path: product-09-07.jpg
+
+  variant_image_245:
+    variant: @variant_59
+    path: product-09-01.jpg
+
+  variant_image_246:
+    variant: @variant_59
+    path: product-09-02.jpg
+
+  variant_image_247:
+    variant: @variant_59
+    path: product-09-03.jpg
+
+  variant_image_248:
+    variant: @variant_59
+    path: product-09-04.jpg
+
+  variant_image_249:
+    variant: @variant_59
+    path: product-09-05.jpg
+
+  variant_image_250:
+    variant: @variant_59
+    path: product-09-06.jpg
+
+  variant_image_251:
+    variant: @variant_59
+    path: product-09-07.jpg
+
+  variant_image_252:
+    variant: @variant_60
+    path: product-09-01.jpg
+
+  variant_image_253:
+    variant: @variant_60
+    path: product-09-02.jpg
+
+  variant_image_254:
+    variant: @variant_60
+    path: product-09-03.jpg
+
+  variant_image_255:
+    variant: @variant_60
+    path: product-09-04.jpg
+
+  variant_image_256:
+    variant: @variant_60
+    path: product-09-05.jpg
+
+  variant_image_257:
+    variant: @variant_60
+    path: product-09-06.jpg
+
+  variant_image_258:
+    variant: @variant_60
+    path: product-09-07.jpg
+
+  variant_image_259:
+    variant: @variant_61
+    path: product-09-01.jpg
+
+  variant_image_260:
+    variant: @variant_61
+    path: product-09-02.jpg
+
+  variant_image_261:
+    variant: @variant_61
+    path: product-09-03.jpg
+
+  variant_image_262:
+    variant: @variant_61
+    path: product-09-04.jpg
+
+  variant_image_263:
+    variant: @variant_61
+    path: product-09-05.jpg
+
+  variant_image_264:
+    variant: @variant_61
+    path: product-09-06.jpg
+
+  variant_image_265:
+    variant: @variant_61
+    path: product-09-07.jpg
+
+  variant_image_266:
+    variant: @variant_62
+    path: product-10-01.jpg
+
+  variant_image_267:
+    variant: @variant_62
+    path: product-10-02.jpg
+
+  variant_image_268:
+    variant: @variant_63
+    path: product-10-03.jpg
+
+  variant_image_269:
+    variant: @variant_63
+    path: product-10-04.jpg
+
+  variant_image_270:
+    variant: @variant_64
+    path: product-11-01.jpg
+
+  variant_image_271:
+    variant: @variant_64
+    path: product-11-02.jpg
+
+  variant_image_272:
+    variant: @variant_64
+    path: product-11-03.jpg
+
+  variant_image_273:
+    variant: @variant_64
+    path: product-11-04.jpg
+
+  variant_image_274:
+    variant: @variant_65
+    path: product-11-01.jpg
+
+  variant_image_275:
+    variant: @variant_65
+    path: product-11-02.jpg
+
+  variant_image_276:
+    variant: @variant_65
+    path: product-11-03.jpg
+
+  variant_image_277:
+    variant: @variant_65
+    path: product-11-04.jpg
+
+  variant_image_278:
+    variant: @variant_66
+    path: product-11-01.jpg
+
+  variant_image_279:
+    variant: @variant_66
+    path: product-11-02.jpg
+
+  variant_image_280:
+    variant: @variant_66
+    path: product-11-03.jpg
+
+  variant_image_281:
+    variant: @variant_66
+    path: product-11-04.jpg
+
+  variant_image_282:
+    variant: @variant_67
+    path: product-12-04.jpg
+
+  variant_image_283:
+    variant: @variant_67
+    path: product-12-05.jpg
+
+  variant_image_284:
+    variant: @variant_67
+    path: product-12-06.jpg
+
+  variant_image_285:
+    variant: @variant_68
+    path: product-12-01.jpg
+
+  variant_image_286:
+    variant: @variant_68
+    path: product-12-02.jpg
+
+  variant_image_287:
+    variant: @variant_68
+    path: product-12-03.jpg
+
+  variant_image_288:
+    variant: @variant_69
+    path: product-12-01.jpg
+
+  variant_image_289:
+    variant: @variant_69
+    path: product-12-02.jpg
+
+  variant_image_290:
+    variant: @variant_69
+    path: product-12-03.jpg
+
+  variant_image_291:
+    variant: @variant_70
+    path: product-12-01.jpg
+
+  variant_image_292:
+    variant: @variant_70
+    path: product-12-02.jpg
+
+  variant_image_293:
+    variant: @variant_70
+    path: product-12-03.jpg

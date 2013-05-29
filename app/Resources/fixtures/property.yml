@@ -1,0 +1,200 @@
+Nilead\ProductBundle\Entity\Property\DefaultProperty:
+  cell_phone_1:
+    name: 2G Network
+    presentation: 2G Network
+    type: text
+
+  cell_phone_2:
+    name: 3.5mm jack
+    presentation: 3.5mm jack
+    type: text
+
+  cell_phone_3:
+    name: 3G Network
+    presentation: 3G Network
+    type: text
+
+  cell_phone_4:
+    name: 4G Network
+    presentation: 4G Network
+    type: text
+
+  cell_phone_5:
+    name: Alert types
+    presentation: Alert types
+    type: text
+
+  cell_phone_6:
+    name: Announced
+    presentation: Announced
+    type: text
+
+  cell_phone_7:
+    name: Bluetooth
+    presentation: Bluetooth
+    type: text
+
+  cell_phone_8:
+    name: Browser
+    presentation: Browser
+    type: text
+
+  cell_phone_9:
+    name: CPU
+    presentation: CPU
+    type: text
+
+  cell_phone_10:
+    name: Card slot
+    presentation: Card slot
+    type: text
+
+  cell_phone_11:
+    name: Chipset
+    presentation: Chipset
+    type: text
+
+  cell_phone_12:
+    name: Colors
+    presentation: Colors
+    type: text
+
+  cell_phone_13:
+    name: Dimensions
+    presentation: Dimensions
+    type: text
+
+  cell_phone_14:
+    name: EDGE
+    presentation: EDGE
+    type: text
+
+  cell_phone_15:
+    name: Features
+    presentation: Features
+    type: text
+
+  cell_phone_16:
+    name: GPRS
+    presentation: GPRS
+    type: text
+
+  cell_phone_17:
+    name: GPS
+    presentation: GPS
+    type: text
+
+  cell_phone_18:
+    name: GPU
+    presentation: GPU
+    type: text
+
+  cell_phone_19:
+    name: Infrared port
+    presentation: Infrared port
+    type: text
+
+  cell_phone_20:
+    name: Internal
+    presentation: Internal
+    type: text
+
+  cell_phone_21:
+    name: Java
+    presentation: Java
+    type: text
+
+  cell_phone_22:
+    name: Loudspeaker
+    presentation: Loudspeaker
+    type: text
+
+  cell_phone_23:
+    name: Messaging
+    presentation: Messaging
+    type: text
+
+  cell_phone_24:
+    name: Multitouch
+    presentation: Multitouch
+    type: text
+
+  cell_phone_25:
+    name: NFC
+    presentation: NFC
+    type: text
+
+  cell_phone_26:
+    name: OS
+    presentation: OS
+    type: text
+
+  cell_phone_27:
+    name: Primary
+    presentation: Primary
+    type: text
+
+  cell_phone_28:
+    name: Protection
+    presentation: Protection
+    type: text
+
+  cell_phone_29:
+    name: Radio
+    presentation: Radio
+    type: text
+
+  cell_phone_30:
+    name: SIM
+    presentation: SIM
+    type: text
+
+  cell_phone_31:
+    name: Secondary
+    presentation: Secondary
+    type: text
+
+  cell_phone_32:
+    name: Sensors
+    presentation: Sensors
+    type: text
+
+  cell_phone_33:
+    name: Size
+    presentation: Size
+    type: text
+
+  cell_phone_34:
+    name: Speed
+    presentation: Speed
+    type: text
+
+  cell_phone_35:
+    name: Status
+    presentation: Status
+    type: text
+
+  cell_phone_36:
+    name: Type
+    presentation: Type
+    type: text
+
+  cell_phone_37:
+    name: USB
+    presentation: USB
+    type: text
+
+  cell_phone_38:
+    name: Video
+    presentation: Video
+    type: text
+
+  cell_phone_39:
+    name: WLAN
+    presentation: WLAN
+    type: text
+
+  cell_phone_40:
+    name: Weight
+    presentation: Weight
+    type: text
