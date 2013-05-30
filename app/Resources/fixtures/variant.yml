@@ -1,0 +1,677 @@
+Nilead\CoreBundle\Entity\Product\Variant\Variant:
+  # Master Variant
+  variant_1:
+    product: @product_1
+    master: true
+    price: 350
+    onHand: 9
+    availableOnDemand: true
+    isCustomPrice: false
+
+  variant_2:
+    product: @product_2
+    master: true
+    price: 280
+    onHand: 20
+    availableOnDemand: true
+    isCustomPrice: false
+
+  variant_3:
+    product: @product_3
+    master: true
+    price: 235
+    onHand: 37
+    availableOnDemand: true
+    isCustomPrice: false
+
+  variant_4:
+    product: @product_4
+    master: true
+    price: 250
+    onHand: 23
+    availableOnDemand: true
+    isCustomPrice: false
+
+  variant_5:
+    product: @product_5
+    master: true
+    price: 350
+    onHand: 27
+    availableOnDemand: true
+    isCustomPrice: false
+
+  variant_6:
+    product: @product_6
+    master: true
+    price: 280
+    onHand: 12
+    availableOnDemand: true
+    isCustomPrice: false
+
+  variant_7:
+    product: @product_7
+    master: true
+    price: 270
+    onHand: 22
+    availableOnDemand: true
+    isCustomPrice: false
+
+  variant_8:
+    product: @product_8
+    master: true
+    price: 295
+    onHand: 37
+    availableOnDemand: true
+    isCustomPrice: false
+
+  variant_9:
+    product: @product_9
+    master: true
+    price: 310
+    onHand: 17
+    availableOnDemand: true
+    isCustomPrice: false
+
+  variant_10:
+    product: @product_10
+    master: true
+    price: 288
+    onHand: 15
+    availableOnDemand: true
+    isCustomPrice: false
+
+  variant_11:
+    product: @product_11
+    master: true
+    price: 295
+    onHand: 12
+    availableOnDemand: true
+    isCustomPrice: false
+
+  variant_12:
+    product: @product_12
+    master: true
+    price: 260
+    onHand: 14
+    availableOnDemand: true
+    isCustomPrice: false
+
+  variant_13:
+    product: @product_1
+    master: false
+    sku: NL_<numberBetween(10000, 99999)>
+    price: 354
+    onHand: 8
+    availableOnDemand: true
+    isCustomPrice: false
+    options: [@clothes_size_s]
+
+  variant_14:
+    product: @product_1
+    master: false
+    sku: NL_<numberBetween(10000, 99999)>
+    price: 350
+    onHand: 1
+    availableOnDemand: true
+    isCustomPrice: false
+    options: [@clothes_size_l]
+
+  variant_15:
+    product: @product_2
+    master: false
+    sku: NL_<numberBetween(10000, 99999)>
+    price: 286
+    onHand: 5
+    availableOnDemand: true
+    isCustomPrice: false
+    options: [@clothes_color_xanh_coban, @clothes_size_m]
+
+  variant_16:
+    product: @product_2
+    master: false
+    sku: NL_<numberBetween(10000, 99999)>
+    price: 281
+    onHand: 9
+    availableOnDemand: true
+    isCustomPrice: false
+    options: [@clothes_color_xanh_coban, @clothes_size_l]
+
+  variant_17:
+    product: @product_2
+    master: false
+    sku: NL_<numberBetween(10000, 99999)>
+    price: 282
+    onHand: 5
+    availableOnDemand: true
+    isCustomPrice: false
+    options: [@clothes_color_hong_phan, @clothes_size_s]
+
+  variant_18:
+    product: @product_2
+    master: false
+    sku: NL_<numberBetween(10000, 99999)>
+    price: 284
+    onHand: 1
+    availableOnDemand: true
+    isCustomPrice: false
+    options: [@clothes_color_hong_phan, @clothes_size_l]
+
+  variant_19:
+    product: @product_3
+    master: false
+    sku: NL_<numberBetween(10000, 99999)>
+    price: 237
+    onHand: 9
+    availableOnDemand: true
+    isCustomPrice: false
+    options: [@clothes_color_hoa_nen_den, @clothes_size_s]
+
+  variant_20:
+    product: @product_3
+    master: false
+    sku: NL_<numberBetween(10000, 99999)>
+    price: 245
+    onHand: 6
+    availableOnDemand: true
+    isCustomPrice: false
+    options: [@clothes_color_hoa_nen_den, @clothes_size_m]
+
+  variant_21:
+    product: @product_3
+    master: false
+    sku: NL_<numberBetween(10000, 99999)>
+    price: 247
+    onHand: 0
+    availableOnDemand: true
+    isCustomPrice: false
+    options: [@clothes_color_hoa_nen_den, @clothes_size_l]
+
+  variant_22:
+    product: @product_3
+    master: false
+    sku: NL_<numberBetween(10000, 99999)>
+    price: 245
+    onHand: 0
+    availableOnDemand: true
+    isCustomPrice: false
+    options: [@clothes_color_hoa_nen_den, @clothes_size_xl]
+
+  variant_23:
+    product: @product_3
+    master: false
+    sku: NL_<numberBetween(10000, 99999)>
+    price: 247
+    onHand: 6
+    availableOnDemand: true
+    isCustomPrice: false
+    options: [@clothes_color_hoa_nen_den, @clothes_size_xxl]
+
+  variant_24:
+    product: @product_3
+    master: false
+    sku: NL_<numberBetween(10000, 99999)>
+    price: 241
+    onHand: 8
+    availableOnDemand: true
+    isCustomPrice: false
+    options: [@clothes_color_hoa_nen_hong, @clothes_size_s]
+
+  variant_25:
+    product: @product_3
+    master: false
+    sku: NL_<numberBetween(10000, 99999)>
+    price: 236
+    onHand: 2
+    availableOnDemand: true
+    isCustomPrice: false
+    options: [@clothes_color_hoa_nen_hong, @clothes_size_m]
+
+  variant_26:
+    product: @product_3
+    master: false
+    sku: NL_<numberBetween(10000, 99999)>
+    price: 237
+    onHand: 0
+    availableOnDemand: true
+    isCustomPrice: false
+    options: [@clothes_color_hoa_nen_hong, @clothes_size_l]
+
+  variant_27:
+    product: @product_3
+    master: false
+    sku: NL_<numberBetween(10000, 99999)>
+    price: 247
+    onHand: 6
+    availableOnDemand: true
+    isCustomPrice: false
+    options: [@clothes_color_hoa_nen_hong, @clothes_size_xl]
+
+  variant_28:
+    product: @product_3
+    master: false
+    sku: NL_<numberBetween(10000, 99999)>
+    price: 237
+    onHand: 0
+    availableOnDemand: true
+    isCustomPrice: false
+    options: [@clothes_color_hoa_nen_hong, @clothes_size_xxl]
+
+  variant_29:
+    product: @product_4
+    master: false
+    sku: NL_<numberBetween(10000, 99999)>
+    price: 263
+    onHand: 2
+    availableOnDemand: true
+    isCustomPrice: false
+    options: [@clothes_color_den, @clothes_size_s]
+
+  variant_30:
+    product: @product_4
+    master: false
+    sku: NL_<numberBetween(10000, 99999)>
+    price: 254
+    onHand: 6
+    availableOnDemand: true
+    isCustomPrice: false
+    options: [@clothes_color_den, @clothes_size_m]
+
+  variant_31:
+    product: @product_4
+    master: false
+    sku: NL_<numberBetween(10000, 99999)>
+    price: 260
+    onHand: 4
+    availableOnDemand: true
+    isCustomPrice: false
+    options: [@clothes_color_den, @clothes_size_l]
+
+  variant_32:
+    product: @product_4
+    master: false
+    sku: NL_<numberBetween(10000, 99999)>
+    price: 250
+    onHand: 6
+    availableOnDemand: true
+    isCustomPrice: false
+    options: [@clothes_color_kem, @clothes_size_s]
+
+  variant_33:
+    product: @product_4
+    master: false
+    sku: NL_<numberBetween(10000, 99999)>
+    price: 253
+    onHand: 5
+    availableOnDemand: true
+    isCustomPrice: false
+    options: [@clothes_color_kem, @clothes_size_l]
+
+  variant_34:
+    product: @product_5
+    master: false
+    sku: NL_<numberBetween(10000, 99999)>
+    price: 362
+    onHand: 2
+    availableOnDemand: true
+    isCustomPrice: false
+    options: [@clothes_color_xanh_duong, @clothes_size_s]
+
+  variant_35:
+    product: @product_5
+    master: false
+    sku: NL_<numberBetween(10000, 99999)>
+    price: 355
+    onHand: 0
+    availableOnDemand: true
+    isCustomPrice: false
+    options: [@clothes_color_vang, @clothes_size_s]
+
+  variant_36:
+    product: @product_5
+    master: false
+    sku: NL_<numberBetween(10000, 99999)>
+    price: 365
+    onHand: 3
+    availableOnDemand: true
+    isCustomPrice: false
+    options: [@clothes_color_vang, @clothes_size_m]
+
+  variant_37:
+    product: @product_5
+    master: false
+    sku: NL_<numberBetween(10000, 99999)>
+    price: 367
+    onHand: 5
+    availableOnDemand: true
+    isCustomPrice: false
+    options: [@clothes_color_vang, @clothes_size_l]
+
+  variant_38:
+    product: @product_5
+    master: false
+    sku: NL_<numberBetween(10000, 99999)>
+    price: 361
+    onHand: 8
+    availableOnDemand: true
+    isCustomPrice: false
+    options: [@clothes_color_xam, @clothes_size_s]
+
+  variant_39:
+    product: @product_5
+    master: false
+    sku: NL_<numberBetween(10000, 99999)>
+    price: 358
+    onHand: 2
+    availableOnDemand: true
+    isCustomPrice: false
+    options: [@clothes_color_xam, @clothes_size_m]
+
+  variant_40:
+    product: @product_5
+    master: false
+    sku: NL_<numberBetween(10000, 99999)>
+    price: 353
+    onHand: 7
+    availableOnDemand: true
+    isCustomPrice: false
+    options: [@clothes_color_xam, @clothes_size_l]
+
+  variant_41:
+    product: @product_6
+    master: false
+    sku: NL_<numberBetween(10000, 99999)>
+    price: 283
+    onHand: 1
+    availableOnDemand: true
+    isCustomPrice: false
+    options: [@clothes_size_m]
+
+  variant_42:
+    product: @product_6
+    master: false
+    sku: NL_<numberBetween(10000, 99999)>
+    price: 291
+    onHand: 6
+    availableOnDemand: true
+    isCustomPrice: false
+    options: [@clothes_size_xl]
+
+  variant_43:
+    product: @product_6
+    master: false
+    sku: NL_<numberBetween(10000, 99999)>
+    price: 286
+    onHand: 5
+    availableOnDemand: true
+    isCustomPrice: false
+    options: [@clothes_size_xxl]
+
+  variant_44:
+    product: @product_7
+    master: false
+    sku: NL_<numberBetween(10000, 99999)>
+    price: 284
+    onHand: 0
+    availableOnDemand: true
+    isCustomPrice: false
+    options: [@clothes_color_xanh_duong, @clothes_size_s]
+
+  variant_45:
+    product: @product_7
+    master: false
+    sku: NL_<numberBetween(10000, 99999)>
+    price: 271
+    onHand: 0
+    availableOnDemand: true
+    isCustomPrice: false
+    options: [@clothes_color_xanh_duong, @clothes_size_xl]
+
+  variant_46:
+    product: @product_7
+    master: false
+    sku: NL_<numberBetween(10000, 99999)>
+    price: 282
+    onHand: 1
+    availableOnDemand: true
+    isCustomPrice: false
+    options: [@clothes_color_trang, @clothes_size_s]
+
+  variant_47:
+    product: @product_7
+    master: false
+    sku: NL_<numberBetween(10000, 99999)>
+    price: 279
+    onHand: 3
+    availableOnDemand: true
+    isCustomPrice: false
+    options: [@clothes_color_trang, @clothes_size_l]
+
+  variant_48:
+    product: @product_7
+    master: false
+    sku: NL_<numberBetween(10000, 99999)>
+    price: 276
+    onHand: 4
+    availableOnDemand: true
+    isCustomPrice: false
+    options: [@clothes_color_hong_phan, @clothes_size_s]
+
+  variant_49:
+    product: @product_7
+    master: false
+    sku: NL_<numberBetween(10000, 99999)>
+    price: 274
+    onHand: 6
+    availableOnDemand: true
+    isCustomPrice: false
+    options: [@clothes_color_hong_phan, @clothes_size_l]
+
+  variant_50:
+    product: @product_7
+    master: false
+    sku: NL_<numberBetween(10000, 99999)>
+    price: 280
+    onHand: 8
+    availableOnDemand: true
+    isCustomPrice: false
+    options: [@clothes_color_hong_phan, @clothes_size_xl]
+
+  variant_51:
+    product: @product_8
+    master: false
+    sku: NL_<numberBetween(10000, 99999)>
+    price: 299
+    onHand: 7
+    availableOnDemand: true
+    isCustomPrice: false
+    options: [@clothes_color_trang, @clothes_size_s]
+
+  variant_52:
+    product: @product_8
+    master: false
+    sku: NL_<numberBetween(10000, 99999)>
+    price: 296
+    onHand: 8
+    availableOnDemand: true
+    isCustomPrice: false
+    options: [@clothes_color_trang, @clothes_size_m]
+
+  variant_53:
+    product: @product_8
+    master: false
+    sku: NL_<numberBetween(10000, 99999)>
+    price: 301
+    onHand: 0
+    availableOnDemand: true
+    isCustomPrice: false
+    options: [@clothes_color_trang, @clothes_size_xl]
+
+  variant_54:
+    product: @product_8
+    master: false
+    sku: NL_<numberBetween(10000, 99999)>
+    price: 298
+    onHand: 6
+    availableOnDemand: true
+    isCustomPrice: false
+    options: [@clothes_color_xanh_aqua, @clothes_size_s]
+
+  variant_55:
+    product: @product_8
+    master: false
+    sku: NL_<numberBetween(10000, 99999)>
+    price: 300
+    onHand: 6
+    availableOnDemand: true
+    isCustomPrice: false
+    options: [@clothes_color_xanh_aqua, @clothes_size_m]
+
+  variant_56:
+    product: @product_8
+    master: false
+    sku: NL_<numberBetween(10000, 99999)>
+    price: 302
+    onHand: 7
+    availableOnDemand: true
+    isCustomPrice: false
+    options: [@clothes_color_xanh_aqua, @clothes_size_l]
+
+  variant_57:
+    product: @product_8
+    master: false
+    sku: NL_<numberBetween(10000, 99999)>
+    price: 305
+    onHand: 3
+    availableOnDemand: true
+    isCustomPrice: false
+    options: [@clothes_color_xanh_aqua, @clothes_size_xl]
+
+  variant_58:
+    product: @product_9
+    master: false
+    sku: NL_<numberBetween(10000, 99999)>
+    price: 317
+    onHand: 7
+    availableOnDemand: true
+    isCustomPrice: false
+    options: [@clothes_size_s]
+
+  variant_59:
+    product: @product_9
+    master: false
+    sku: NL_<numberBetween(10000, 99999)>
+    price: 312
+    onHand: 5
+    availableOnDemand: true
+    isCustomPrice: false
+    options: [@clothes_size_m]
+
+  variant_60:
+    product: @product_9
+    master: false
+    sku: NL_<numberBetween(10000, 99999)>
+    price: 321
+    onHand: 0
+    availableOnDemand: true
+    isCustomPrice: false
+    options: [@clothes_size_l]
+
+  variant_61:
+    product: @product_9
+    master: false
+    sku: NL_<numberBetween(10000, 99999)>
+    price: 318
+    onHand: 5
+    availableOnDemand: true
+    isCustomPrice: false
+    options: [@clothes_size_xl]
+
+  variant_62:
+    product: @product_10
+    master: false
+    sku: NL_<numberBetween(10000, 99999)>
+    price: 293
+    onHand: 9
+    availableOnDemand: true
+    isCustomPrice: false
+    options: [@clothes_color_trang, @clothes_size_l]
+
+  variant_63:
+    product: @product_10
+    master: false
+    sku: NL_<numberBetween(10000, 99999)>
+    price: 296
+    onHand: 6
+    availableOnDemand: true
+    isCustomPrice: false
+    options: [@clothes_color_den, @clothes_size_l]
+
+  variant_64:
+    product: @product_11
+    master: false
+    sku: NL_<numberBetween(10000, 99999)>
+    price: 295
+    onHand: 6
+    availableOnDemand: true
+    isCustomPrice: false
+    options: [@clothes_size_s]
+
+  variant_65:
+    product: @product_11
+    master: false
+    sku: NL_<numberBetween(10000, 99999)>
+    price: 303
+    onHand: 0
+    availableOnDemand: true
+    isCustomPrice: false
+    options: [@clothes_size_m]
+
+  variant_66:
+    product: @product_11
+    master: false
+    sku: NL_<numberBetween(10000, 99999)>
+    price: 295
+    onHand: 6
+    availableOnDemand: true
+    isCustomPrice: false
+    options: [@clothes_size_l]
+
+  variant_67:
+    product: @product_12
+    master: false
+    sku: NL_<numberBetween(10000, 99999)>
+    price: 265
+    onHand: 6
+    availableOnDemand: true
+    isCustomPrice: false
+    options: [@clothes_color_xanh_duong, @clothes_size_s]
+
+  variant_68:
+    product: @product_12
+    master: false
+    sku: NL_<numberBetween(10000, 99999)>
+    price: 263
+    onHand: 5
+    availableOnDemand: true
+    isCustomPrice: false
+    options: [@clothes_color_kem, @clothes_size_s]
+
+  variant_69:
+    product: @product_12
+    master: false
+    sku: NL_<numberBetween(10000, 99999)>
+    price: 272
+    onHand: 3
+    availableOnDemand: true
+    isCustomPrice: false
+    options: [@clothes_color_kem, @clothes_size_m]
+
+  variant_70:
+    product: @product_12
+    master: false
+    sku: NL_<numberBetween(10000, 99999)>
+    price: 265
+    onHand: 0
+    availableOnDemand: true
+    isCustomPrice: false
+    options: [@clothes_color_kem, @clothes_size_l]

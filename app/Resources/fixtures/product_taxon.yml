@@ -1,0 +1,8 @@
+Nilead\CoreBundle\Entity\Product\ProductTaxon:
+  # Primary categories
+  product_taxon_{1..12}:
+    product: @product_<current()>
+    taxon: @women_dresses
+    primaryFlag: true
+
+  # Additional categories

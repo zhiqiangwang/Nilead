@@ -1,0 +1,6 @@
+Sylius\Bundle\TaxonomiesBundle\Entity\DefaultTaxonomy:
+  category:
+    name: category
+
+  brand:
+    name: brand
