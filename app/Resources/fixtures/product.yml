@@ -1,0 +1,109 @@
+Nilead\CoreBundle\Entity\Product\Product:
+  # Women ~> Dresses
+  product_1:
+    name: Váy ren liền trắng đen đẹp xinh cho mùa hè 2013
+    slug: Vay-ren-lien-trang-den-dep-xinh-cho-mua-he-2013
+    shortDescription: Fusce porta sem sed nibh tristique imperdiet. Integer molestie tellus quis sapien porta vitae pharetra elit luctus. Duis nec mi ut mauris suscipit imperd
+    description: <p>Curabitur massa lacus, cursus consequat posuere eu, cursus sed magna. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque aliquet interdum lacus sed venenatis. Phasellus vehicula nisl a magna luctus feugiat. Nunc nec velit vitae lectus hendrerit egestas sit amet eget nisi. Proin sagittis nisl id massa placerat eu consectetur felis hendrerit. Donec a est tellus, nec aliquet lorem. Nam turpis tellus, mattis id blandit sit amet, pharetra sed mi. Duis in velit et sapien pellentesque tristique. Nulla viverra elit sed nisi vulputate in auctor ante semper. Morbi scelerisque, odio a egestas mattis, arcu magna posuere lectus, ut placerat nibh turpis a magna. Vestibulum convallis gravida est ac aliquam. Phasellus blandit, metus non elementum convallis, lorem elit pulvinar orci, id pharetra sapien tortor ac diam. Nam elementum, neque vel ultricies convallis, erat velit egestas est, a tempus magna magna ac tortor. Curabitur placerat mi nec lorem pharetra mollis.</p><p>Donec iaculis accumsan lacus id luctus. Ut at tempus ligula. Duis vel commodo odio. Duis non arcu sem, ac gravida urna. Nunc luctus facilisis viverra. Sed vel leo in nulla blandit cursus ac ac lectus. Aenean porttitor blandit nibh vel tristique. Vivamus sed est vitae sem dignissim pellentesque. Donec quis massa id orci faucibus blandit ac vitae magna. Suspendisse tempus porta ligula, in interdum enim interdum nec. Integer tempor lectus quam. Vestibulum odio risus, accumsan pellentesque pharetra sit amet, interdum in massa. Phasellus sit amet mi non diam convallis ornare. Praesent in elit diam.</p><p>Ut nec augue enim. Cras a congue sapien. Nam porta condimentum elit a fermentum. Donec accumsan viverra ipsum ut ultrices. Mauris posuere faucibus venenatis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse lacus dolor, imperdiet vel pellentesque in, interdum non dolor. Phasellus varius velit at nulla blandit lacinia. In sed risus arcu, non faucibus neque. Aenean id varius nibh.</p><p>Vivamus ac urna elit, at convallis elit. Donec sed tellus lacus. Nam ac est odio, eget commodo orci. Suspendisse potenti. Aliquam erat volutpat. Nam adipiscing ornare mollis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nunc blandit luctus tortor quis mattis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus nec erat ligula, nec aliquam neque. Aenean nulla urna, porttitor eget euismod nec, dictum ut mauris. In pharetra tempor urna porta hendrerit. Maecenas et magna ac odio lobortis malesuada.</p><p>Sed dolor risus, ornare vitae volutpat sit amet, aliquam quis dolor. Pellentesque sagittis mi diam. Mauris diam dui, consectetur vitae egestas vitae, laoreet nec urna. Cras facilisis venenatis lacinia. Cras pharetra quam vitae diam varius gravida. Quisque egestas vehicula placerat. Integer congue sodales lacus eget accumsan. Integer varius mattis erat, a sodales est elementum vitae. Aliquam ac pellentesque tortor. Phasellus tellus mauris, commodo eu rhoncus ut, eleifend in sapien. Maecenas faucibus hendrerit lectus vitae posuere. Aliquam lobortis nisl ut tellus gravida euismod. Phasellus libero augue, venenatis at consectetur vel, scelerisque in erat. Praesent eleifend massa vel sem vestibulum venenatis. Donec gravida metus in quam varius ut pulvinar quam semper. Nam dui nibh, mattis sed dignissim eget, fringilla in velit.</p><p>Nullam vel est turpis, eget facilisis sem. Duis tellus nisl, posuere quis ullamcorper ut, suscipit et velit. Curabitur in leo at lorem placerat semper quis non nunc. Sed in mi nibh, pharetra semper mi. Pellentesque nec neque at libero mattis convallis vitae a mauris. Donec ante mauris, sodales vel tincidunt non, semper vel neque. Sed purus odio, congue ut gravida et, dignissim sit amet sem. Duis volutpat ligula sed purus accumsan congue. Etiam non est libero, quis suscipit mi.</p>
+    createdAt: <dateTimeBetween('-365 days', 'now')>
+    variantSelectionMethod: match
+    options: [@clothes_size]
+
+  product_2:
+    name: Đầm mullet voan sang trọng
+    slug: Dam-mullet-voan-sang-trong
+    shortDescription: Nullam purus mi, mattis ut semper id, auctor ut metus. Proin commodo posuere augue. Cras vel sem erat, id egestas orci. Phasellus elit ipsum, feugiat vitae consequat a, adipiscing ac enim. Fusce pharetra euismod odi
+    description: <p>Vivamus ac urna elit, at convallis elit. Donec sed tellus lacus. Nam ac est odio, eget commodo orci. Suspendisse potenti. Aliquam erat volutpat. Nam adipiscing ornare mollis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nunc blandit luctus tortor quis mattis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus nec erat ligula, nec aliquam neque. Aenean nulla urna, porttitor eget euismod nec, dictum ut mauris. In pharetra tempor urna porta hendrerit. Maecenas et magna ac odio lobortis malesuada.</p>
+    createdAt: <dateTimeBetween('-365 days', 'now')>
+    variantSelectionMethod: match
+    options: [@clothes_color, @clothes_size]
+
+  product_3:
+    name: Đầm hoa body ngắn thun lạnh xẻ tà sang trọng
+    slug: Dam-hoa-body-ngan-thun-lanh-xe-ta-sang-trong
+    shortDescription: Aenean imperdiet consequat orci, eget posuere sem consectetur et. Nullam fermentum eleifend sapien, placerat pulvinar dui fermentum at. Maecenas tincidunt consectetur diam, eu sagittis est egestas id. Suspendisse sed congue leo. Nullam feugiat au
+    description: <p>Curabitur massa lacus, cursus consequat posuere eu, cursus sed magna. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque aliquet interdum lacus sed venenatis. Phasellus vehicula nisl a magna luctus feugiat. Nunc nec velit vitae lectus hendrerit egestas sit amet eget nisi. Proin sagittis nisl id massa placerat eu consectetur felis hendrerit. Donec a est tellus, nec aliquet lorem. Nam turpis tellus, mattis id blandit sit amet, pharetra sed mi. Duis in velit et sapien pellentesque tristique. Nulla viverra elit sed nisi vulputate in auctor ante semper. Morbi scelerisque, odio a egestas mattis, arcu magna posuere lectus, ut placerat nibh turpis a magna. Vestibulum convallis gravida est ac aliquam. Phasellus blandit, metus non elementum convallis, lorem elit pulvinar orci, id pharetra sapien tortor ac diam. Nam elementum, neque vel ultricies convallis, erat velit egestas est, a tempus magna magna ac tortor. Curabitur placerat mi nec lorem pharetra mollis.</p><p>Donec auctor dignissim dolor quis ornare. Nulla rutrum, enim nec ultricies volutpat, risus felis dictum arcu, sed elementum neque ligula ut elit. Duis sed odio ipsum, et venenatis lacus. Proin ut risus sit amet arcu bibendum venenatis. Nam at aliquam ligula. Praesent vitae blandit sapien. Maecenas commodo, erat et sagittis porta, justo leo vulputate augue, eu molestie lacus justo sed turpis. Vivamus dolor ante, volutpat eget rutrum ut, tempus eget eros. Aliquam tincidunt diam in tortor eleifend varius et lacinia erat.</p>
+    createdAt: <dateTimeBetween('-365 days', 'now')>
+    variantSelectionMethod: match
+    options: [@clothes_color, @clothes_size]
+
+  product_4:
+    name: Đầm voan họa tiết thổ cẩm cổ peter cao cấp
+    slug: Dam-voan-hoa-tiet-tho-cam-co-peter-cao-cap
+    shortDescription: Vivamus ac urna elit, at convallis elit. Donec sed tellus lacus. Nam ac est odio, eget commodo orci. Suspendisse potenti. Aliquam erat volutpat. Nam adipiscing ornare mollis. Ves
+    description: <p>Sed faucibus sapien sit amet nibh dapibus ac cursus nunc vehicula. Duis vel mi eu leo viverra luctus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Sed volutpat est et nibh ultrices pretium. Fusce iaculis urna sit amet enim mattis aliquam. Proin rhoncus lorem ut est tincidunt ut molestie purus fringilla. In adipiscing malesuada magna, nec condimentum libero eleifend nec. Curabitur et nibh lorem, a gravida metus. Vestibulum risus sapien, condimentum at gravida vitae, pretium at ante. Pellentesque porttitor libero a diam pellentesque quis dignissim leo pharetra. Etiam vitae nunc nec nisi cursus aliquet.</p>
+    createdAt: <dateTimeBetween('-365 days', 'now')>
+    variantSelectionMethod: match
+    options: [@clothes_color, @clothes_size]
+
+  product_5:
+    name: Váy liền sọc caro Hàn Quốc dễ thương, kèm thắt lưng
+    slug: Vay-lien-soc-caro-Han-Quoc-de-thuong-kem-that-lung
+    shortDescription: Donec eget nulla et lorem elementum accumsan. Integer at nulla metus, lacinia tempus felis. Mauris pharetra tempus ultrices. Aliquam bibendum, velit sit amet eleifend eleifend, pu
+    description: <p>Donec auctor dignissim dolor quis ornare. Nulla rutrum, enim nec ultricies volutpat, risus felis dictum arcu, sed elementum neque ligula ut elit. Duis sed odio ipsum, et venenatis lacus. Proin ut risus sit amet arcu bibendum venenatis. Nam at aliquam ligula. Praesent vitae blandit sapien. Maecenas commodo, erat et sagittis porta, justo leo vulputate augue, eu molestie lacus justo sed turpis. Vivamus dolor ante, volutpat eget rutrum ut, tempus eget eros. Aliquam tincidunt diam in tortor eleifend varius et lacinia erat.</p>
+    createdAt: <dateTimeBetween('-365 days', 'now')>
+    variantSelectionMethod: match
+    options: [@clothes_color, @clothes_size]
+
+  product_6:
+    name: Đầm hoa xòe công sở, dạo phố ngày hè 2013
+    slug: Dam-hoa-xoe-cong-so-dao-pho-ngay-he-2013
+    shortDescription: Ut nec augue enim. Cras a congue sapien. Nam porta condimentum elit a fermentum. Donec accumsan viverra ipsum ut ultrices. Mauris posuere fa
+    description: <p>Sed et arcu felis, tincidunt facilisis ante. Proin malesuada nisi ut ligula tempus ut varius nulla porttitor. Donec sagittis mauris ullamcorper nisl pellentesque in pellentesque lectus fringilla. Aenean et velit est. Vestibulum sollicitudin leo id lorem fringilla vel mattis sapien gravida. Praesent luctus viverra erat, vel rhoncus quam semper quis. Nulla dapibus rhoncus tellus sit amet tristique. In hac habitasse platea dictumst. Phasellus faucibus ligula ac leo consequat at hendrerit lectus dictum. Nulla at quam sit amet ante porta scelerisque a eu lectus. Proin dolor ligula, convallis nec consequat fringilla, iaculis ac dui.</p>
+    createdAt: <dateTimeBetween('-365 days', 'now')>
+    variantSelectionMethod: match
+    options: [@clothes_size]
+
+  product_7:
+    name: Váy mullet đuôi tôm trắng đen hồng lụa đẹp hè 2013
+    slug: Vay-mullet-duoi-tom-trang-den-hong-lua-dep-he-2013
+    shortDescription: Mauris at ligula ante, sollicitudin ultricies ante. Etiam vitae nunc nibh, eget congue nisi. Donec at leo vel ipsum pellentesque cursus. Sed convallis lectus euismod felis varius eleifend. Nullam eleifend tincidunt luctus. Integer posuere qu
+    description: <p>Mauris at ligula ante, sollicitudin ultricies ante. Etiam vitae nunc nibh, eget congue nisi. Donec at leo vel ipsum pellentesque cursus. Sed convallis lectus euismod felis varius eleifend. Nullam eleifend tincidunt luctus. Integer posuere quam ac sapien varius auctor. Nullam lacinia ultricies odio eu elementum. Nulla sit amet metus id arcu egestas imperdiet eleifend id mauris.</p><p>Mauris ut elit risus, ut rutrum ligula. Nulla eu ultricies arcu. Duis eu justo quam. Donec lacinia eros sed est interdum dapibus. Pellentesque faucibus est a eros cursus elementum. Curabitur ac velit dolor. Aliquam lobortis nisi vel est rutrum in tempor arcu interdum. In sed est enim. Vestibulum dapibus odio ac nisl aliquam vitae egestas nisi semper. Aliquam ac ipsum at arcu consectetur convallis. Sed sed magna gravida massa scelerisque faucibus. Proin facilisis laoreet tortor. Maecenas tincidunt mollis metus vitae egestas.</p><p>Fusce porta sem sed nibh tristique imperdiet. Integer molestie tellus quis sapien porta vitae pharetra elit luctus. Duis nec mi ut mauris suscipit imperdiet vitae a massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et risus eget ipsum tempus ultricies. Phasellus volutpat lacus eget turpis facilisis quis ornare dolor consectetur. Sed rutrum nulla at lectus vehicula vel suscipit massa pretium.</p><p>Curabitur massa lacus, cursus consequat posuere eu, cursus sed magna. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque aliquet interdum lacus sed venenatis. Phasellus vehicula nisl a magna luctus feugiat. Nunc nec velit vitae lectus hendrerit egestas sit amet eget nisi. Proin sagittis nisl id massa placerat eu consectetur felis hendrerit. Donec a est tellus, nec aliquet lorem. Nam turpis tellus, mattis id blandit sit amet, pharetra sed mi. Duis in velit et sapien pellentesque tristique. Nulla viverra elit sed nisi vulputate in auctor ante semper. Morbi scelerisque, odio a egestas mattis, arcu magna posuere lectus, ut placerat nibh turpis a magna. Vestibulum convallis gravida est ac aliquam. Phasellus blandit, metus non elementum convallis, lorem elit pulvinar orci, id pharetra sapien tortor ac diam. Nam elementum, neque vel ultricies convallis, erat velit egestas est, a tempus magna magna ac tortor. Curabitur placerat mi nec lorem pharetra mollis.</p>
+    createdAt: <dateTimeBetween('-365 days', 'now')>
+    variantSelectionMethod: match
+    options: [@clothes_color, @clothes_size]
+
+  product_8:
+    name: Đầm voan lụa mịn đẹp cho mùa hè 2013
+    slug: Dam-voan-lua-min-dep-cho-mua-he-2013
+    shortDescription: Mauris ut elit risus, ut rutrum ligula. Nulla eu ultricies arcu. Duis eu justo quam. Donec lacinia eros sed est interdum dapibus. Pellentesque faucibus est a eros cursus elementum. Curabitur ac velit dolor. A
+    description: <p>Curabitur massa lacus, cursus consequat posuere eu, cursus sed magna. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque aliquet interdum lacus sed venenatis. Phasellus vehicula nisl a magna luctus feugiat. Nunc nec velit vitae lectus hendrerit egestas sit amet eget nisi. Proin sagittis nisl id massa placerat eu consectetur felis hendrerit. Donec a est tellus, nec aliquet lorem. Nam turpis tellus, mattis id blandit sit amet, pharetra sed mi. Duis in velit et sapien pellentesque tristique. Nulla viverra elit sed nisi vulputate in auctor ante semper. Morbi scelerisque, odio a egestas mattis, arcu magna posuere lectus, ut placerat nibh turpis a magna. Vestibulum convallis gravida est ac aliquam. Phasellus blandit, metus non elementum convallis, lorem elit pulvinar orci, id pharetra sapien tortor ac diam. Nam elementum, neque vel ultricies convallis, erat velit egestas est, a tempus magna magna ac tortor. Curabitur placerat mi nec lorem pharetra mollis.</p>
+    createdAt: <dateTimeBetween('-365 days', 'now')>
+    variantSelectionMethod: match
+    options: [@clothes_color, @clothes_size]
+
+  product_9:
+    name: Đầm hoa xòe đẹp màu pastel
+    slug: Dam-hoa-xoe-dep-mau-pastel
+    shortDescription: Suspendisse mi risus, mattis vel malesuada sit amet, feugiat et mi. Vivamus interdum nunc id est egestas vel luctus sem viverra. Etiam neque est, tincidunt vitae facilisis
+    description: <p>Praesent urna tellus, rhoncus eu ullamcorper vel, luctus quis est. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris pharetra mauris et eros placerat ornare. Aenean dapibus dapibus sapien in mollis. Sed vehicula lectus a ante lacinia sed tristique justo imperdiet. Etiam rutrum commodo mollis. Etiam dui risus, suscipit et dapibus sit amet, gravida eget arcu. Phasellus et eros at diam suscipit scelerisque id sit amet lacus. Integer ultricies sodales purus, eu vulputate nisi porttitor eget. Fusce sit amet lectus ut nulla viverra ornare ut at enim. Donec placerat pretium dolor sit amet tincidunt.</p>
+    createdAt: <dateTimeBetween('-365 days', 'now')>
+    variantSelectionMethod: match
+    options: [@clothes_size]
+
+  product_10:
+    name: Váy ren liền trắng đen đẹp xinh cho mùa hè 2013
+    slug: Vay-ren-lien-trang-den-dep-xinh-cho-mua-he-2013
+    shortDescription: In velit risus, tincidunt vitae venenatis id, luctus eget massa. Praesent sed lorem urna. Morbi dolor nisl, egestas adipiscing consectetur rutrum, iacu
+    description: <p>Sed faucibus sapien sit amet nibh dapibus ac cursus nunc vehicula. Duis vel mi eu leo viverra luctus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Sed volutpat est et nibh ultrices pretium. Fusce iaculis urna sit amet enim mattis aliquam. Proin rhoncus lorem ut est tincidunt ut molestie purus fringilla. In adipiscing malesuada magna, nec condimentum libero eleifend nec. Curabitur et nibh lorem, a gravida metus. Vestibulum risus sapien, condimentum at gravida vitae, pretium at ante. Pellentesque porttitor libero a diam pellentesque quis dignissim leo pharetra. Etiam vitae nunc nec nisi cursus aliquet.</p>
+    createdAt: <dateTimeBetween('-365 days', 'now')>
+    variantSelectionMethod: match
+    options: [@clothes_color, @clothes_size]
+
+  product_11:
+    name: Đầm voan ngắn tay công sở 2013
+    slug: Dam-voan-ngan-tay-cong-so-2013
+    shortDescription: Nullam vel est turpis, eget facilisis sem. Duis tellus nisl, posuere quis ullamcorper ut, suscipit et velit. Curabitur in leo at lorem placerat semper quis non nunc. Sed in mi nibh, pharetra semper mi. Pellentes
+    description: <p>Mauris sem tortor, rutrum laoreet feugiat id, accumsan sit amet tortor. Suspendisse lectus erat, faucibus ut placerat nec, fringilla sed enim. Curabitur ornare nisl quis enim viverra egestas. Cras nec enim eu magna porttitor iaculis eget vitae sapien. Proin eleifend, elit eu tempus luctus, lorem diam semper quam, ac mollis ante risus vitae magna. Mauris venenatis dolor a ligula adipiscing pharetra. Nunc sollicitudin orci vel elit iaculis at vestibulum augue luctus. Aliquam eu dolor quam. Curabitur semper tortor rhoncus tortor semper venenatis. In vel erat turpis. In tempor adipiscing dolor, quis semper elit vulputate vehicula. Nullam auctor ultrices lectus vel suscipit. Ut vel nunc at metus malesuada egestas. Vestibulum sit amet nisl nec ipsum varius tincidunt sed id nisl.</p><p>Mauris at ligula ante, sollicitudin ultricies ante. Etiam vitae nunc nibh, eget congue nisi. Donec at leo vel ipsum pellentesque cursus. Sed convallis lectus euismod felis varius eleifend. Nullam eleifend tincidunt luctus. Integer posuere quam ac sapien varius auctor. Nullam lacinia ultricies odio eu elementum. Nulla sit amet metus id arcu egestas imperdiet eleifend id mauris.</p><p>Sed dolor risus, ornare vitae volutpat sit amet, aliquam quis dolor. Pellentesque sagittis mi diam. Mauris diam dui, consectetur vitae egestas vitae, laoreet nec urna. Cras facilisis venenatis lacinia. Cras pharetra quam vitae diam varius gravida. Quisque egestas vehicula placerat. Integer congue sodales lacus eget accumsan. Integer varius mattis erat, a sodales est elementum vitae. Aliquam ac pellentesque tortor. Phasellus tellus mauris, commodo eu rhoncus ut, eleifend in sapien. Maecenas faucibus hendrerit lectus vitae posuere. Aliquam lobortis nisl ut tellus gravida euismod. Phasellus libero augue, venenatis at consectetur vel, scelerisque in erat. Praesent eleifend massa vel sem vestibulum venenatis. Donec gravida metus in quam varius ut pulvinar quam semper. Nam dui nibh, mattis sed dignissim eget, fringilla in velit.</p>
+    createdAt: <dateTimeBetween('-365 days', 'now')>
+    variantSelectionMethod: match
+    options: [@clothes_size]
+
+  product_12:
+    name: Đầm mullet voan liền dự tiệc
+    slug: Dam-mullet-voan-lien-du-tiec
+    shortDescription: Praesent urna tellus, rhoncus eu ullamcorper vel, luctus quis est. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris pharetra mauris et eros placerat ornare.
+    description: <p>Donec et sapien risus, vitae pulvinar neque. Curabitur nec massa eget neque volutpat aliquam. Donec gravida lectus eu velit sagittis sit amet egestas massa pellentesque. Nunc a felis lorem, vitae condimentum eros. Phasellus nisi purus, bibendum quis consequat vitae, ornare ut eros. Sed vehicula arcu quis metus convallis luctus sit amet id nibh. Ut sit amet ligula nisi. Mauris rutrum libero eu erat pretium vehicula. Maecenas vulputate, augue et condimentum dapibus, magna neque condimentum massa, ut dapibus ipsum odio eu turpis. Sed laoreet sapien sit amet ipsum sollicitudin vel lobortis odio pretium. Aenean non leo nisl, ut dignissim lorem.</p><p>Praesent urna tellus, rhoncus eu ullamcorper vel, luctus quis est. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris pharetra mauris et eros placerat ornare. Aenean dapibus dapibus sapien in mollis. Sed vehicula lectus a ante lacinia sed tristique justo imperdiet. Etiam rutrum commodo mollis. Etiam dui risus, suscipit et dapibus sit amet, gravida eget arcu. Phasellus et eros at diam suscipit scelerisque id sit amet lacus. Integer ultricies sodales purus, eu vulputate nisi porttitor eget. Fusce sit amet lectus ut nulla viverra ornare ut at enim. Donec placerat pretium dolor sit amet tincidunt.</p>
+    createdAt: <dateTimeBetween('-365 days', 'now')>
+    variantSelectionMethod: match
+    options: [@clothes_color, @clothes_size]

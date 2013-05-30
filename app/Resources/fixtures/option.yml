@@ -1,0 +1,11 @@
+Nilead\ProductBundle\Entity\Option\DefaultOption:
+  # Clothes
+  clothes_size:
+    id: 1
+    name: Clothes Size
+    presentation: Size
+
+  clothes_color:
+    id: 2
+    name: Clothes Color
+    presentation: Color

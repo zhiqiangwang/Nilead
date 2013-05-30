@@ -1,0 +1,37 @@
+{% extends "NileadWebBundle::base.html.twig" %}
+
+{# TITLE #}
+{% block title %}Index{% endblock %}
+
+{# HEAD #}
+{% block head %}
+    {{ parent() }}
+    <link rel="stylesheet" media="all" href="{{ asset('themes/default/css/style.css') }}"/>
+{% endblock %}
+
+{# BODY #}
+{% block body %}
+    <div id="wrapper">
+        <div id="container">
+            <div id="header">
+                {% block header %}
+                    <h1 class="header_title">Demo Store</h1>
+                    <div class="header_nav">
+                        {{ nilead_menu_render('main', {'template':'NileadWebBundle:Frontend:Menu/knp_menu.html.twig'}) }}
+                    </div>
+                {% endblock %}
+            </div>
+            <div id="content clearfix">
+                {% block content %}
+
+                {% endblock %}
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        {% block footer %}
+            <div class="footer_tagline">DESIGNED AND MANUFACTURED IN AMERICA</div>
+        {% endblock %}
+    </div>
+{% endblock %}
