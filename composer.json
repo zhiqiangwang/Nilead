@@ -31,13 +31,9 @@
         "friendsofsymfony/user-bundle": "*",
         "nelmio/alice": "1.4.*@dev",
         "sylius/cart-bundle": "@dev",
-        "sylius/money-bundle": "@dev",
         "sylius/resource-bundle": "@dev",
         "sylius/taxonomies-bundle": "@dev",
-        "sylius/inventory-bundle": "@dev",
-        "sylius/sales-bundle": "@dev",
         "sylius/taxation-bundle": "@dev",
-        "sylius/inventory-bundle": "@dev",
         "mathiasverraes/money": "@dev",
         "white-october/pagerfanta-bundle": "@dev",
         "pagerfanta/pagerfanta": "@dev",
@@ -50,7 +46,15 @@
         "nilead/payments-bundle": "@dev",
         "nilead/shipments-bundle": "@dev",
         "nilead/inventory-bundle": "@dev",
-        "nilead/product-bundle": "@dev"
+        "nilead/product-bundle": "@dev",
+        "nilead/web-bundle": "@dev",
+        "nilead/sales-bundle": "@dev",
+        "nilead/loader-bundle": "@dev",
+        "nilead/theming-bundle": "@dev",
+        "nilead/utility-bundle": "@dev",
+        "liip/theme-bundle": "dev-master",
+        "mrclay/minify": "dev-master",
+        "liip/doctrine-cache-bundle": "dev-master"
     },
     "scripts": {
         "post-install-cmd": [

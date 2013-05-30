@@ -10,15 +10,26 @@ class AppKernel extends Kernel
         $bundles = array(
             //  Nilead
             new Sylius\Bundle\ResourceBundle\SyliusResourceBundle(),
-            new Nilead\CoreBundle\NileadCoreBundle(),
+            new Nilead\UtilityBundle\NileadUtilityBundle(),
             new Nilead\WebBundle\NileadWebBundle(),
+            new Liip\DoctrineCacheBundle\LiipDoctrineCacheBundle(),
+            new Nilead\LoaderBundle\NileadLoaderBundle(),
+            new Nilead\ThemingBundle\NileadThemingBundle(),
+            new Nilead\ProductBundle\NileadProductBundle(),
             new Nilead\ShipmentsBundle\NileadShipmentsBundle(),
+            new Nilead\PaymentsBundle\NileadPaymentsBundle(),
             new Nilead\ContactBundle\NileadContactBundle(),
             new Nilead\PricingBundle\NileadPricingBundle(),
             new Nilead\InventoryBundle\NileadInventoryBundle(),
+            new Nilead\MenuBundle\NileadMenuBundle(),
+            new Nilead\SalesBundle\NileadSalesBundle(),
+            new Nilead\CoreBundle\NileadCoreBundle(),
+
+            new Sylius\Bundle\TaxonomiesBundle\SyliusTaxonomiesBundle(),
 
             //  Core
             new Doctrine\Bundle\DoctrineBundle\DoctrineBundle(),
+            new Stof\DoctrineExtensionsBundle\StofDoctrineExtensionsBundle(),
             new Symfony\Bundle\AsseticBundle\AsseticBundle(),
             new Symfony\Bundle\FrameworkBundle\FrameworkBundle(),
             new Symfony\Bundle\SecurityBundle\SecurityBundle(),
@@ -37,15 +48,13 @@ class AppKernel extends Kernel
             new JMS\SerializerBundle\JMSSerializerBundle($this),
             new FOS\RestBundle\FOSRestBundle(),
             new FOS\UserBundle\FOSUserBundle(),
-            new Gregwar\CaptchaBundle\GregwarCaptchaBundle(),
+            // new Gregwar\CaptchaBundle\GregwarCaptchaBundle(),
             new Knp\Bundle\MenuBundle\KnpMenuBundle(),
-
-            new Nilead\MenuBundle\NileadMenuBundle(),
-
+            new Liip\ThemeBundle\LiipThemeBundle()
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {
-            $bundles[] = new Acme\DemoBundle\AcmeDemoBundle();
+//            $bundles[] = new Acme\DemoBundle\AcmeDemoBundle();
             $bundles[] = new Symfony\Bundle\WebProfilerBundle\WebProfilerBundle();
             $bundles[] = new Sensio\Bundle\DistributionBundle\SensioDistributionBundle();
             $bundles[] = new Sensio\Bundle\GeneratorBundle\SensioGeneratorBundle();
