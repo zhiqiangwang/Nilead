@@ -1,0 +1,31 @@
+{% set product = item.variant.product %}
+<tr>
+    <td>{{ loop.index }}</td>
+    <td>
+        <a href="{{ path('nilead.frontend.product.info', {'slug': product.slug}) }}" class="thumbnail" style="width: 90px;">
+            <img src="{{ asset('images/126x126/' ~ product.image.path) }}" alt="" />
+        </a>
+    </td>
+    <td>
+        <a href="{{ path('nilead.frontend.product.info', {'slug': product.slug}) }}">
+        <p><strong>{{ product.name }}</strong></p>
+        </a>
+        <ul>
+            {% for option in item.variant.options %}
+            <li>{{ option.presentation }}: {{ option.value }}</li>
+            {% endfor %}
+        </ul>
+    </td>
+    <td>
+        {{ form_row(form.items[loop.index0].quantity, {'attr': {'class': 'input-small'}, 'label': false}) }}
+    </td>
+    <td>
+        <a href="{{ path('nilead.frontend.cart.remove', {'id': item.id}) }}" class="btn btn-danger"><i class="icon-trash icon-white"></i></a>
+    </td>
+    <td>
+        {{ item.unitPrice }}
+    </td>
+    <td style="text-align: right">
+        {{ item.total }}
+    </td>
+</tr>

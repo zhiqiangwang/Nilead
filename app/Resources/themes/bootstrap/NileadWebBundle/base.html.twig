@@ -1,0 +1,29 @@
+<!doctype html>
+
+<html>
+<head>
+    {% block head %}
+        <title>{% block title %} - Nilead{% endblock %}</title>
+
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        {% block stylesheets %}
+            <link rel="stylesheet" href="{{ asset('themes/bootstrap/css/style.css') }}" />
+        {% endblock %}
+    {% endblock %}
+</head>
+
+<body>
+    {% block body %}
+
+        {% block scripts %}
+        <!-- HTML5 shim for IE backwards compatibility -->
+        <!--[if lt IE 9]><script src="js/html5.js"></script><![endif]-->
+
+        <script src="{{ asset('themes/bootstrap/js/jquery/jquery-1.10.0.js') }}"></script>
+        <script src="{{ asset('themes/bootstrap/js/bootstrap/bootstrap.min.js') }}"></script>
+        {% endblock %}
+    {% endblock %}
+</body>
+</html>

@@ -1,46 +1,82 @@
+nilead_core:
+  driver: doctrine/orm
+
 nilead_pricing:
   driver: doctrine/orm
 
 nilead_payments:
   driver: doctrine/orm
+  classes:
+    invoice:
+      model: Nilead\CoreBundle\Entity\Payments\Invoice\Invoice
+    invoice_item:
+      model: Nilead\CoreBundle\Entity\Payments\Invoice\InvoiceItem
+
+nilead_sales:
+  driver: doctrine/orm
+  classes:
+    order_item:
+      model:  Nilead\CoreBundle\Entity\Sales\OrderItem
 
 nilead_product:
-  driver: doctrine/orm	  
+  driver: doctrine/orm
+  classes:
+    product:
+      model: Nilead\CoreBundle\Entity\Product\Product
+      form: Nilead\CoreBundle\Form\Type\ProductType
+    variant:
+      model: Nilead\CoreBundle\Entity\Product\Variant\Variant
+      form: Nilead\CoreBundle\Form\Type\VariantType
 
 nilead_shipments:
-    driver: doctrine/orm
-    classes:
-        shipment:
-            model: Nilead\CoreBundle\Entity\Shipment
-        shipment_item:
-            model: Nilead\CoreBundle\Entity\ShipmentItem
-        picklist_item:
-            model: Nilead\CoreBundle\Entity\PicklistItem
+  driver: doctrine/orm
+  classes:
+    shipment:
+      model: Nilead\CoreBundle\Entity\Shipments\Shipment
+    shipment_item:
+      model: Nilead\CoreBundle\Entity\Shipments\ShipmentItem
+    picklist_item:
+      model: Nilead\CoreBundle\Entity\Shipments\PicklistItem
 
 nilead_contact:
-    driver: doctrine/orm
-    classes:
-        organization:
-            model: Nilead\CoreBundle\Entity\Organization
-        party:
-            model: Nilead\CoreBundle\Entity\Party
-        party_type:
-            model: Nilead\CoreBundle\Entity\PartyType
+  driver: doctrine/orm
+  classes:
+    organization:
+      model: Nilead\CoreBundle\Entity\Contact\Organization
+    party:
+      model: Nilead\CoreBundle\Entity\Contact\Party
+    party_type:
+      model: Nilead\CoreBundle\Entity\Contact\PartyType
 
 nilead_inventory:
-    driver: doctrine/orm
-    classes:
-        inventory_item:
-            model: Nilead\CoreBundle\Entity\InventoryItem
-        inventory_adjustment:
-            model: Nilead\CoreBundle\Entity\InventoryAdjustment
+  driver: doctrine/orm
+  backorders: true
+  # classes:
+  #   inventory_item:
+  #     model: Nilead\CoreBundle\Entity\InventoryItem
+  #   inventory_adjustment:
+  #     model: Nilead\CoreBundle\Entity\InventoryAdjustment
+
+nilead_cart:
+  driver: doctrine/orm # Configure the doctrine orm driver used in documentation.
+  resolver: nilead.resolver.cart_item # The id of our newly created service.
+  classes:
+    cart:
+      model: Nilead\CoreBundle\Entity\Cart\Cart
+    item:
+      model: Nilead\CoreBundle\Entity\Cart\CartItem
+      form: Nilead\CoreBundle\Form\Type\CartItemType
 
 sylius_resource:
-    resources:
-        nilead.user:
-            driver: doctrine/orm
-            classes:
-                model: Nilead\CoreBundle\Entity\User
+  resources:
+    nilead.user:
+      driver: doctrine/orm
+      classes:
+        model: Nilead\CoreBundle\Entity\User
+
+sylius_taxonomies:
+  driver: doctrine/orm
 
 parameters:
-    nilead_shipments.manager.shipment.default.class:      Nilead\CoreBundle\Manager\ShipmentManager
+  nilead_shipments.manager.shipment.default.class:      Nilead\CoreBundle\Manager\ShipmentManager
+

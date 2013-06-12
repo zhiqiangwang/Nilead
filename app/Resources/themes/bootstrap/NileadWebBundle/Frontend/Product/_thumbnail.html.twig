@@ -1,0 +1,13 @@
+{% if index % size == 0 %}
+    <ul class="thumbnails">
+{% endif %}
+
+<li class="span{{ 12 / size }}">
+    <a href="{{ asset('images/126x126/' ~ image.path) }}" class="thumbnail">
+        <img src="{{ asset('images/126x126/' ~ image.path) }}" alt="">
+    </a>
+</li>
+
+{% if (index + 1) % size == 0 %}
+    </ul>
+{% endif %}
