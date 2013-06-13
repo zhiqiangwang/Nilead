@@ -1,0 +1,64 @@
+{% extends "NileadWebBundle:Frontend:layout.html.twig" %}
+
+{% import 'NileadWebBundle:Frontend/Macros:alerts.html.twig' as alerts %}
+
+{% form_theme form _self %}
+
+{% block content %}
+<div class="page-header">
+<h1>{{ 'Summary Header'|raw }}</h1>
+</div>
+
+{% if not cart.empty %}
+<div class="alert alert-info">
+<strong>{{ cart.total }}</strong>, {{ 'Total Item' }}
+</div>
+
+{{ form_errors(form) }}
+
+<form action="{{ path('nilead.frontend.cart.save') }}" method="post" novalidate>
+<table class="table">
+    <thead>
+        <tr>
+            <th>#</th>
+            <th></th>
+            <th>{{ 'Product' }}</th>
+            <th>{{ 'Quantity' }}</th>
+            <th></th>
+            <th>{{ 'Unit Price' }}</th>
+            <th style="text-align: right;">{{ 'Totoal' }}</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for item in cart.items %}
+            {% include 'NileadWebBundle:Frontend/Cart:_item.html.twig' %}
+        {% endfor %}
+    </tbody>
+    <tfoot>
+        <tr>
+            <td colspan="6"></td>
+            <td style="text-align: right;">
+                <strong>{{ 'Grand Total' }}</strong>: {{ cart.total }}
+            </td>
+        </tr>
+    </tfoot>
+</table>
+{{ form_rest(form) }}
+<div class="well">
+    <button type="submit" class="btn btn-primary btn-large"><i class="icon-save"></i> {{ 'Save' }}</button>
+    <div class="pull-right">
+    <a href="{{ path('nilead.frontend.checkout.index') }}" class="btn btn-success btn-large"><i class="icon-shopping-cart"></i> {{ 'Checkout' }}</a>
+    <a href="#" class="btn btn-danger btn-large"><i class="icon-remove"></i> {{ 'Clear' }}</a>
+    </div>
+</div>
+</form>
+{% else %}
+    {{ alerts.info('nilead.cart.empty') }}
+{% endif %}
+
+{% endblock %}
+
+{% block nilead_cart_item_row %}
+{{ parent() }}
+{% block form_message %}{% endblock %}
+{% endblock %}

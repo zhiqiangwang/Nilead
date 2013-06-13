@@ -7,10 +7,10 @@ nilead_pricing:
 nilead_payments:
   driver: doctrine/orm
   classes:
-      invoice:
-        model: Nilead\CoreBundle\Entity\Payments\Invoice\Invoice
-      invoice_item:
-        model: Nilead\CoreBundle\Entity\Payments\Invoice\InvoiceItem
+    invoice:
+      model: Nilead\CoreBundle\Entity\Payments\Invoice\Invoice
+    invoice_item:
+      model: Nilead\CoreBundle\Entity\Payments\Invoice\InvoiceItem
 
 nilead_sales:
   driver: doctrine/orm
@@ -58,6 +58,22 @@ nilead_sales:
   classes:
     order_item:
       model:  Nilead\CoreBundle\Entity\Sales\OrderItem
+  backorders: true
+  # classes:
+  #   inventory_item:
+  #     model: Nilead\CoreBundle\Entity\InventoryItem
+  #   inventory_adjustment:
+  #     model: Nilead\CoreBundle\Entity\InventoryAdjustment
+
+nilead_cart:
+  driver: doctrine/orm # Configure the doctrine orm driver used in documentation.
+  resolver: nilead.resolver.cart_item # The id of our newly created service.
+  classes:
+    cart:
+      model: Nilead\CoreBundle\Entity\Cart\Cart
+    item:
+      model: Nilead\CoreBundle\Entity\Cart\CartItem
+      form: Nilead\CoreBundle\Form\Type\CartItemType
 
 sylius_resource:
   resources:
@@ -76,9 +92,9 @@ liip_doctrine_cache:
       # cache type is "file_system"
       type: file_system
 
+
 parameters:
   nilead_shipments.manager.shipment.default.class:      Nilead\CoreBundle\Manager\ShipmentManager
-
   nilead_loader.settings:
     filters:
       minify:

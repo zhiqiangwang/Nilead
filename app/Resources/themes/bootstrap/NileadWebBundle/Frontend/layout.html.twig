@@ -1,0 +1,49 @@
+{% extends "NileadWebBundle::base.html.twig" %}
+
+{% block title %}Index{% endblock %}
+
+{% block body %}
+    {% block header %}
+        <header class="hero-unit">
+            <h1>Nilead</h1>
+            <p class="muted">shopping cart system</p>
+        </header>
+    {% endblock %}
+
+    <div class="container">
+        {% block breadcrumb %}
+        <ul class="breadcrumb">
+            <li><a href="#">Home</a> <span class="divider">/</span></li>
+            <li><a href="#">Library</a> <span class="divider">/</span></li>
+            <li class="active">Data</li>
+        </ul>
+        {% endblock %}
+
+        {% block content %}
+            <div class="row-fluid">
+                <aside class="span3">
+                    <h4>Aside</h4>
+                </aside>
+
+                <div class="span9">
+                     {#% for name, flashes in app.session.flashbag.all if name in ['success', 'error', 'fos_user_success'] %}
+                        {% for flash in flashes %}
+                            <div class="alert alert-{{ name == 'fos_user_success' ? 'success' : name }}">
+                                <a class="close" data-dismiss="alert" href="#">×</a>
+                                {{ flash|trans }}
+                            </div>
+                        {% endfor %}
+                    {% endfor %#}
+                </div>
+            <div>
+        {% endblock %}
+    </div>
+
+    {% block footer %}
+        <footer class="well" style="border-radius: 0; margin-bottom: 0">
+            <span class="muted">&copy; Nilead 2013.</span>
+        </footer>
+    {% endblock %}
+
+    {{ parent() }}
+{% endblock %}

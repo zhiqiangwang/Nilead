@@ -1,0 +1,179 @@
+{% extends "NileadWebBundle:Frontend:layout.html.twig" %}
+
+{% set form = nilead_cart_form({'product': product}) %}
+
+{% block title %}{{ product.name }}{{ parent() }}{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" href="{{ asset('themes/bootstrap/css/pages/product_info.css') }}" />
+{% endblock %}
+
+{% block scripts %}
+    {{ parent() }}
+    <script src="{{ asset('themes/bootstrap/js/pages/product_info.js') }}"></script>
+{% endblock %}
+
+{% block breadcrumb %}
+    {{ nilead_breadcrumb_render()|raw }}
+    {{ parent() }}
+{% endblock %}
+
+{% block content %}
+<div class="row-fluid">
+    {% for name, flashes in app.session.flashbag.all if name in ['success', 'error', 'fos_user_success'] %}
+        {% for flash in flashes %}
+            <div class="alert alert-{{ name == 'fos_user_success' ? 'success' : name }}">
+                <a class="close" data-dismiss="alert" href="#">×</a>
+                {{ flash|trans }}
+            </div>
+        {% endfor %}
+    {% endfor %}
+
+    <div class="row-fluid">
+        <form action="{{ path('nilead.frontend.cart.add') }}" method="post" class="clearfix">
+            <div class="span4">
+                {% if product.images|length > 0 %}
+                    <a href="{{ path('nilead.frontend.product.info', {'slug': product.slug}) }}" class="thumbnail">
+                        <img src="{{ asset('images/494x494/' ~ product.image.path) }}" alt="" />
+                    </a>
+
+                    {% from "NileadWebBundle:Frontend/Product:macros.html.twig" import thumbnail %}
+                    {{ thumbnail(product.images, 3) }}
+                {% else %}
+                    <a href="{{ path('nilead.frontend.product.info', {'slug': product.slug}) }}" class="thumbnail">
+                        <img src="{{ asset('images/494x494/_no-image.png') }}" alt="" />
+                    </a>
+                {% endif %}
+            </div>
+
+            <div class="span8">
+                <a href="{{ path('nilead.frontend.product.info', {'slug': product.slug}) }}"><h3>{{ product.name }}</h3></a>
+
+                <hr>
+                <ul class="unstyled">
+                    <li>
+                        <span>Price:</span>
+                        <span class="price">{{ product.masterVariant.price }}</span>
+                    </li>
+                    <li>
+                        <span>SKU:</span>
+                        Please select a variant...
+                    </li>
+                    <li>
+                        <span>Available:</span>
+                        {% if nilead_inventory_is_available(product.masterVariant) %}
+                            <span class="label label-success">In Stock</span>
+                        {% else %}
+                            <span class="label label-important">Out of Stock</span>
+                        {% endif %}
+                    </li>
+                </ul>
+
+                <hr>
+                <p>{{ product.shortDescription|default('No description...')|trans|raw }}</p>
+
+                <hr>
+
+                <input type="hidden" name="id" value="{{ product.id }}" />
+                <input type="hidden" name="variant" value="" />
+
+                {% if not product.hasOptions and not nilead_inventory_is_available(product.masterVariant) %}
+                    <span class="label label-important">{{ 'Out of Stock'|trans }}</span>
+                {% else %}
+                    <div class="row-fluid">
+                        <div class="well well-small span6">
+                        {% if product.isVariantSelectionMethodChoice %}
+                        <table class="table table-condensed">
+                            <thead>
+                                <tr>
+                                    <th></th>
+                                    <th>{{ 'Variant Price'|trans }}</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% for variant in product.variants if variant.available %}
+                                <tr>
+                                    <td>
+                                        {% if variant.presentation is empty %}
+                                        <ul class="unstyled">
+                                            {% for option in variant.options %}
+                                            <li><strong>{{ option.presentation }}</strong>: {{ option.value }}</li>
+                                            {% endfor %}
+                                        </ul>
+                                        {% else %}
+                                            {{ variant.presentation }}
+                                        {% endif %}
+                                    </td>
+                                    <td>
+                                        <span class="label label-success">{{ variant.price }}</span>
+                                    </td>
+                                    <td>
+                                    {% if nilead_inventory_is_available(variant) %}
+                                        {{ form_widget(form.variant[loop.index0]) }}
+                                    {% else %}
+                                        <span class="label label-important">{{ 'Out of Stock'|trans }}</span>
+                                    {% endif %}
+                                    </td>
+                                </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                        {% elseif product.isVariantSelectionMethodMatch %}
+                            <div class="well">
+                            {{ form_widget(form.variant) }}
+                            </div>
+                        {% elseif product.isVariantSelectionMethodNileadMatch %}
+                            {{ form_widget(form.variant) }}
+                        {% endif %}
+                        </div>
+
+                        <div class="well well-small span6">
+                            {{ form_row(form.quantity, {'attr': {'class': 'center-text'}, 'empty_value': '1'}) }}
+                            {{ form_widget(form._token) }}
+                            <button type="submit" class="btn btn-success"><i class="icon-shopping-cart icon-white"></i> {{ 'Add to Cart'|trans }}</button>
+                        </div>
+                    </div>
+                {% endif %}
+
+                <ul class="nav nav-tabs" id="myTab">
+                    <li class="active"><a href="#description">Description</a></li>
+                    <li><a href="#properties">Properties</a></li>
+                    <li><a href="#review">Review</a></li>
+                </ul>
+
+                <div class="tab-content">
+                    <div class="tab-pane active" id="description">
+                        {{ product.description|default('No description')|trans|raw }}
+                    </div>
+
+                    <div class="tab-pane" id="properties">
+                        {% if product.properties|length > 0 %}
+                        <table class="table table-condensed">
+                            <thead>
+                                <tr>
+                                    <th colspan="2">{{ 'Product Properties'|trans }}</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% for property in product.properties %}
+                                <tr>
+                                    <td>{{ property.presentation }}</td>
+                                    <td>{{ property.value }}</td>
+                                </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                        {% endif %}
+                    </div>
+
+                    <div class="tab-pane" id="review">
+                        Review content goes here...
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+{% endblock %}

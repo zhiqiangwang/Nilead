@@ -8,25 +8,6 @@ class AppKernel extends Kernel
     public function registerBundles()
     {
         $bundles = array(
-            //  Nilead
-            new Sylius\Bundle\ResourceBundle\SyliusResourceBundle(),
-            new Nilead\UtilityBundle\NileadUtilityBundle(),
-            new Nilead\WebBundle\NileadWebBundle(),
-            new Liip\DoctrineCacheBundle\LiipDoctrineCacheBundle(),
-            new Nilead\LoaderBundle\NileadLoaderBundle(),
-            new Nilead\ThemingBundle\NileadThemingBundle(),
-            new Nilead\ProductBundle\NileadProductBundle(),
-            new Nilead\ShipmentsBundle\NileadShipmentsBundle(),
-            new Nilead\PaymentsBundle\NileadPaymentsBundle(),
-            new Nilead\ContactBundle\NileadContactBundle(),
-            new Nilead\PricingBundle\NileadPricingBundle(),
-            new Nilead\InventoryBundle\NileadInventoryBundle(),
-            new Nilead\MenuBundle\NileadMenuBundle(),
-            new Nilead\SalesBundle\NileadSalesBundle(),
-            new Nilead\CoreBundle\NileadCoreBundle(),
-
-            new Sylius\Bundle\TaxonomiesBundle\SyliusTaxonomiesBundle(),
-
             //  Core
             new Doctrine\Bundle\DoctrineBundle\DoctrineBundle(),
             new Stof\DoctrineExtensionsBundle\StofDoctrineExtensionsBundle(),
@@ -50,7 +31,30 @@ class AppKernel extends Kernel
             new FOS\UserBundle\FOSUserBundle(),
             // new Gregwar\CaptchaBundle\GregwarCaptchaBundle(),
             new Knp\Bundle\MenuBundle\KnpMenuBundle(),
-            new Liip\ThemeBundle\LiipThemeBundle()
+            new Liip\ThemeBundle\LiipThemeBundle(),
+
+            // Sylius
+            new Sylius\Bundle\ResourceBundle\SyliusResourceBundle(),
+            new Sylius\Bundle\TaxonomiesBundle\SyliusTaxonomiesBundle(),
+            //  Nilead
+            new Nilead\UtilityBundle\NileadUtilityBundle(),
+            new Nilead\WebBundle\NileadWebBundle(),
+            new Liip\DoctrineCacheBundle\LiipDoctrineCacheBundle(),
+            new Nilead\LoaderBundle\NileadLoaderBundle(),
+            new Nilead\ThemingBundle\NileadThemingBundle(),
+            new Nilead\ProductBundle\NileadProductBundle(),
+            new Nilead\ShipmentsBundle\NileadShipmentsBundle(),
+            new Nilead\PaymentsBundle\NileadPaymentsBundle(),
+            new Nilead\ContactBundle\NileadContactBundle(),
+            new Nilead\PricingBundle\NileadPricingBundle(),
+            new Nilead\InventoryBundle\NileadInventoryBundle(),
+            new Nilead\MenuBundle\NileadMenuBundle(),
+            new Nilead\SalesBundle\NileadSalesBundle(),
+            new Nilead\ThemingBundle\NileadThemingBundle(),
+            new Nilead\CartBundle\NileadCartBundle(),
+            new Nilead\BreadcrumbsBundle\NileadBreadcrumbsBundle(),
+            new Nilead\ResourceBundle\NileadResourceBundle(),
+            new Nilead\CoreBundle\NileadCoreBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {

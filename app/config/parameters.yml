@@ -1,29 +1,41 @@
 parameters:
-    kernel.config_dir: '%kernel.root_dir%/config'
-    plugins.root_dir: '%kernel.root_dir%/plugins'
-    store.enable_ssl: false
-    store.frontend.templates_dir: '%kernel.root_dir%/frontend/templates'
-    store.frontend.current_template: classic
-    store.backend.templates_dir: '%kernel.root_dir%/backend/templates'
-    store.backend.current_template: template_default
-    store.root_dir: '%kernel.root_dir%/../web'
-    web.dir: '%kernel.root_dir%/../web'
-    web.relative_dir: ''
-    web.cache_dir: '%web.dir%/cache'
-    web.images_dir: '%web.dir%/images'
+  kernel.config_dir: '%kernel.root_dir%/config'
+  plugins.root_dir: '%kernel.root_dir%/plugins'
+  store.enable_ssl: false
+  store.frontend.templates_dir: '%kernel.root_dir%/frontend/templates'
+  store.frontend.current_template: classic
+  store.backend.templates_dir: '%kernel.root_dir%/backend/templates'
+  store.backend.current_template: template_default
+  store.root_dir: '%kernel.root_dir%/../web'
+  web.dir: '%kernel.root_dir%/../web'
+  web.relative_dir: ''
+  web.cache_dir: '%web.dir%/cache'
+  web.images_dir: '%web.dir%/images'
 
-    database_driver: pdo_mysql
-    database_host: 127.0.0.1
-    database_port: null
-    database_name: zeni
-    database_user: root
-    database_password: null
-    database_path: null
+  database_driver: pdo_mysql
+  database_host: 127.0.0.1
+  database_port: null
+  database_name: zeni
+  database_user: root
+  database_password: null
+  database_path: null
 
-    mailer_transport: smtp
-    mailer_host: 127.0.0.1
-    mailer_user: null
-    mailer_password: null
+  mailer_transport: smtp
+  mailer_host: 127.0.0.1
+  mailer_user: null
+  mailer_password: null
 
-    locale: en
-    secret: 3255ebb771cac20afc031da3073883fe64aefd80
+  locale: en
+  secret: 3255ebb771cac20afc031da3073883fe64aefd80
+
+
+  liip_theme.themes: ['shopper', 'bootstrap']
+  liip_theme.active_theme: 'bootstrap'
+  liip_theme.autodetect_theme: true
+  liip_theme.cookie:
+    name: fsdf
+    lifetime: 7200
+    path: /
+    domain: localhost
+    secure: false
+    http_only: false

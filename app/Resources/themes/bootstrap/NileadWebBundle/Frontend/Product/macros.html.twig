@@ -1,0 +1,9 @@
+{% macro thumbnail(images, size = 3) %}
+<hr>
+<div class="well well-small">
+    {% for index, image in images %}
+        {% include "NileadWebBundle:Frontend/Product:_thumbnail.html.twig" %}
+    {% endfor %}
+</div>
+
+{% endmacro %}

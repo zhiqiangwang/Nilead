@@ -1,20 +1,21 @@
-nilead_main:
-    resource: "@NileadWebBundle/Resources/config/routing/main.xml"
-    prefix:   /nilead
+
+# nilead_theming:
+#     resource: "@NileadThemingBundle/Resources/config/routing.xml"
+#     prefix:   /
 
 #craue_config_settings:
-#  resource: "@StoreBundle/Resources/config/routing/settings.xml"
+#  resource: "@NileadCoreBundle/Resources/config/routing/settings.xml"
 #  prefix: /settings
 #
 #craue_config_settings_modify:
 #  pattern: /settings/modify
 #  defaults:
-#    _controller: StoreBundle:Settings:modify
+#    _controller: NileadCoreBundle:Settings:modify
 #
 #craue_config_settings_section_modify:
 #  pattern: /settings/modify/{section}
 #  defaults:
-#    _controller: StoreBundle:Settings:sectionModify
+#    _controller: NileadCoreBundle:Settings:sectionModify
 
 fos_user_security:
     resource: "@FOSUserBundle/Resources/config/routing/security.xml"
@@ -39,8 +40,6 @@ fos_user_change_password:
     resource: "@FOSUserBundle/Resources/config/routing/change_password.xml"
     prefix: /profile
 
-store_bundle_frontend_default_routes:
-    resource: "@NileadCoreBundle/Resources/config/routing/frontend.xml"
-    prefix: /store
-    requirements:
-          _locale: %locale%
+store_bundle_frontend_routes:
+  resource: "@NileadCoreBundle/Resources/config/routing/frontend.xml"
+  prefix: /store
