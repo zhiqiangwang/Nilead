@@ -10,36 +10,34 @@
     ],
     "require": {
         "php": ">=5.3.3",
-        "symfony/symfony": "2.2.*",
+        "symfony/symfony": "~2.3",
         "doctrine/orm": "~2.2,>=2.2.3",
         "doctrine/doctrine-bundle": "1.2.*",
         "doctrine/data-fixtures": "1.0.*@dev",
         "stof/doctrine-extensions-bundle": "@dev",
         "twig/extensions": "1.0.*",
-        "symfony/assetic-bundle": "2.1.*",
+        "symfony/assetic-bundle": "2.3.*",
         "symfony/swiftmailer-bundle": "2.2.*",
         "symfony/monolog-bundle": "2.2.*",
-        "symfony/web-profiler-bundle": "2.2.*@dev",
+        "symfony/web-profiler-bundle": "~2.3",
         "sensio/distribution-bundle": "2.2.*",
         "sensio/framework-extra-bundle": "2.2.*",
         "sensio/generator-bundle": "2.2.*",
         "jms/i18n-routing-bundle": "dev-master",
         "jms/translation-bundle": "1.1.*@dev",
-        "jms/security-extra-bundle": "1.4.*",
-        "jms/di-extra-bundle": "1.3.*",
+        "jms/security-extra-bundle": "1.5.*@dev",
+        "jms/di-extra-bundle": "1.4.*@dev",
         "gedmo/doctrine-extensions": "2.3.*@dev",
         "friendsofsymfony/user-bundle": "*",
         "nelmio/alice": "1.4.*@dev",
-        "sylius/cart-bundle": "@dev",
-        "sylius/resource-bundle": "@dev",
-        "sylius/taxonomies-bundle": "@dev",
-        "sylius/taxation-bundle": "@dev",
         "mathiasverraes/money": "@dev",
         "white-october/pagerfanta-bundle": "@dev",
         "pagerfanta/pagerfanta": "@dev",
         "knplabs/knp-menu": "2.0.*@dev",
         "knplabs/knp-menu-bundle": "2.0.*@dev",
+        "nilead/resource-bundle": "@dev",
         "nilead/core-bundle": "0.1.*@dev",
+        "nilead/breadcrumbs-bundle": "@dev",
         "nilead/pricing-bundle": "@dev",
         "nilead/contact-bundle": "@dev",
         "nilead/menu-bundle": "@dev",
@@ -51,10 +49,14 @@
         "nilead/sales-bundle": "@dev",
         "nilead/loader-bundle": "@dev",
         "nilead/theming-bundle": "@dev",
+        "nilead/taxonomies-bundle": "@dev",
         "nilead/utility-bundle": "@dev",
+        "nilead/cart-bundle": "@dev",
         "liip/theme-bundle": "dev-master",
+        "liip/imagine-bundle": "dev-master",
         "mrclay/minify": "dev-master",
-        "liip/doctrine-cache-bundle": "dev-master"
+        "liip/doctrine-cache-bundle": "dev-master",
+        "sonata-project/intl-bundle": "2.2.*@dev"
     },
     "scripts": {
         "post-install-cmd": [
@@ -78,7 +80,7 @@
         "symfony-app-dir": "app",
         "symfony-web-dir": "web",
         "branch-alias": {
-            "dev-master": "0.1.1.x-dev"
+            "dev-master": "0.1.2.x-dev"
         }
     }
 }
