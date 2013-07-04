@@ -1,0 +1,45 @@
+<form action="{{ path('nilead.frontend.cart.save') }}" method="post">
+    <fieldset>
+        <table id="shopping-cart-table" class="data-table cart-table">
+            <col width="1">
+            <col>
+            <col width="1">
+            <col width="1">
+            <col width="1">
+            <col width="1">
+            <col width="1">
+
+            <thead>
+                <tr>
+                    <th class="td-image" rowspan="1">&nbsp;</th>
+                    <th class="td-name" rowspan="1"><span class="nobr">Product Name</span></th>
+                    <th class="td-edit" rowspan="1"></th>
+                    <th class="td-price" class="a-center" colspan="1"><span class="nobr">Unit Price</span></th>
+                    <th class="td-qty" rowspan="1" class="a-center">Quantity</th>
+                    <th class="td-price" class="a-center" colspan="1">Subtotal</th>
+                    <th class="td-delete" rowspan="1" class="a-center">&nbsp;</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                {% for item in nilead_cart_get().items %}
+                    {% include 'NileadWebBundle:Frontend/Cart/Summary:_item.html.twig' %}
+                {% endfor %}
+            </tbody>
+
+            <tfoot>
+                <tr>
+                    <td colspan="50" class="a-right">
+                        <button type="button" title="Continue Shopping" class="button button_white btn-continue" onclick="window.history.back()"><span><span>Continue Shopping</span></span></button>
+                        <button type="button" title="Back to Main" class="button button_white btn-continue" style="margin-left: 10px;" onclick="window.location='{{ path('nilead.frontend.index') }}'"><span><span>Back to Main</span></span></button>
+
+                        <button type="submit" title="Update Shopping Cart" class="button button_white btn-update"><span><span>Update Shopping Cart</span></span></button>
+                    </td>
+                </tr>
+            </tfoot>
+        </table>
+        <script type="text/javascript">decorateTable('shopping-cart-table')</script>
+    </fieldset>
+
+    {{ form_rest(form) }}
+</form>

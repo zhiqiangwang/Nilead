@@ -1,0 +1,16 @@
+<li class="item clearfix">
+    <a href="{{ path('nilead.frontend.product.info', {'slug': item.variant.product.slug}) }}" title="Midi Dress With Belt" class="product-image">
+        <img src="{{ ('images/' ~ item.variant.images.first.path) | imagine_filter('nilead_50x50') }}" data-srcx2="{{ ('images/' ~ item.variant.images.first.path) | imagine_filter('nilead_100x100') }}" width="50" height="50" alt="{{ item.variant.product.name }}">
+        <span></span>
+    </a>
+
+    <div class="product-details">
+        <a href="{{ path('nilead.frontend.cart.remove', {'id': item.id}) }}" title="Remove This Item" onclick="return confirm('Are you sure you would like to remove this item from the shopping cart?');" class="btn-remove">Remove This Item</a>
+        <a href="{{ path('nilead.frontend.cart.summary') }}" title="Edit item" class="btn-edit">Edit item</a>
+        <p class="product-name"><a href="{{ path('nilead.frontend.product.info', {'slug': item.variant.product.slug}) }}">{{ item.variant.product.name }}</a></p>
+
+        <strong>{{ item.quantity }}</strong> x
+        <span class="price">${{ item.unitPrice | number_format(2) }}</span> =
+        <span class="price">${{ item.total | number_format(2) }}</span>
+    </div>
+</li>

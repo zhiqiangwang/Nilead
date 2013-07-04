@@ -1,0 +1,67 @@
+{% extends "NileadWebBundle:Frontend:layout.html.twig" %}
+
+
+{# TITLE #}
+{% block title %}Home{{ parent() }}{% endblock %}
+
+
+{# HEAD #}
+{% block head %}
+    <meta name="description" content="Default Description">
+    <meta name="keywords" content="Magento, Varien, E-commerce">
+
+    {{ parent() }}
+{% endblock %}
+
+
+{# SCRIPTS #}
+{% block scripts %}
+    {{ parent() }}
+
+    <script src="{{ asset('themes/shopper/js/jquery.themepunch.plugins.min.js') }}"></script>
+    <script src="{{ asset('themes/shopper/js/jquery.themepunch.revolution.min.js') }}"></script>
+    <script src="{{ asset('themes/shopper/js/components/footer.js') }}"></script>
+    <script src="{{ asset('themes/shopper/js/components/index/latest.js') }}"></script>
+    <script src="{{ asset('themes/shopper/js/components/index/staff_pick.js') }}"></script>
+{% endblock %}
+
+
+{# BODY CLASS #}
+{% block body_class %}cms-index-index cms-shopper-home-slideshow{% endblock %}
+
+
+{# CONTENT #}
+{% block content %}
+{% include 'NileadWebBundle:Components:slideshow.html.twig' %}
+
+<div class="main-container col1-layout">
+    <div class="main row clearfix">
+        <div class="col-main">
+            <div class="std">
+                <div class="home-main">
+                    {{ render(controller('NileadCoreBundle:Product:featured', {
+                        'limit': 9,
+                        'template': 'NileadWebBundle:Frontend/Product:featured.html.twig'
+                    })) }}
+
+                    {{ render(controller('NileadCoreBundle:Product:staffPick', {
+                        'limit': 9,
+                        'template': 'NileadWebBundle:Frontend/Product:staff_pick.html.twig'
+                    })) }}
+
+                    {{ render(controller('NileadCoreBundle:Product:latest', {
+                        'limit': 9,
+                        'template': 'NileadWebBundle:Frontend/Product:latest.html.twig'
+                    })) }}
+                </div>
+
+                <div class="home-right">
+                    {% include 'NileadWebBundle:Components/Index:slideshow.html.twig' %}
+
+                    {% include 'NileadWebBundle:Components/Index:news_letter.html.twig' %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,61 @@
+{% extends "NileadWebBundle:Frontend:layout.html.twig" %}
+
+
+{# TITLE #}
+{% block title %}Create{{ parent() }}{% endblock %}
+
+
+{# HEAD #}
+{% block head %}
+    <meta name="description" content="Default Description">
+    <meta name="keywords" content="Magento, Varien, E-commerce">
+
+    {{ parent() }}
+{% endblock %}
+
+
+{% block body_class %}customer-account-create{% endblock %}
+
+
+{# FOOTER #}
+{% block footer %}
+    {% include 'NileadWebBundle:Components/Login:footer.html.twig' %}
+{% endblock %}
+
+
+{# SCRIPTS #}
+{% block scripts %}
+    {{ parent() }}
+
+    <script src="{{ asset('themes/shopper/js/components/account/register.js') }}"></script>
+{% endblock %}
+
+
+{# CONTENT #}
+{% block content %}
+<br><br><br>
+<br><br><br>
+<div>
+    <center>
+        <p>
+            <img src="{{ asset('themes/shopper/images/shop_icon.png') }}" alt="">
+        </p>
+        <br>
+        <h1>REGISTRATION CONFIRMED!</h1>
+        <h2>Thank you for registering with <strong>Store Name</strong>.</h2>
+        <p>&nbsp;</p>
+        <p>
+            <button class="button" onclick="window.location='{{ path('nilead.frontend.index') }}'">
+                <span>
+                    <span>back to main</span>
+                </span>
+            </button>
+            <button class="button" onclick="window.location='{{ path('nilead.frontend.account.index') }}'">
+                <span>
+                    <span>go to account dashboard</span>
+                </span>
+            </button>
+        </p>
+    </center>
+</div>
+{% endblock %}

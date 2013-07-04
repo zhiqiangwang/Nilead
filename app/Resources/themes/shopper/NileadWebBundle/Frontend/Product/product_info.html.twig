@@ -1,0 +1,67 @@
+{% extends "NileadWebBundle:Frontend:layout.html.twig" %}
+
+
+{# TITLE #}
+{% block title %}{{ product.name }}{{ parent() }}{% endblock %}
+
+
+{# HEAD #}
+{% block head %}
+    <meta name="description" content="Default Description">
+    <meta name="keywords" content="Magento, Varien, E-commerce">
+
+    {{ parent() }}
+{% endblock %}
+
+
+{# SCRIPTS #}
+{% block scripts %}
+    {{ parent() }}
+
+    <script src="{{ asset('themes/shopper/js/pages/product-info.js') }}"></script>
+
+    <script src="{{ asset('themes/shopper/js/components/product/recommend.js') }}"></script>
+    <script src="{{ asset('themes/shopper/js/components/product/related.js') }}"></script>
+    <script src="{{ asset('themes/shopper/js/components/product/tabs.js') }}"></script>
+    <script src="{{ asset('themes/shopper/js/components/footer.js') }}"></script>
+{% endblock %}
+
+
+{% block body_class %}catalog-product-view catalog-product-view product-bodycon-dress-in-animal-with-cut-out{% endblock %}
+
+
+{# CONTENT #}
+{% block content %}
+<div class="main-container col1-layout">
+    <div class="main row clearfix">
+        {{ nilead_breadcrumbs()|raw }}
+
+        <div class="col-main">
+            <div class="product-category-title">
+                <a href="{{ path('nilead.frontend.product.listing_by_category', { 'slug': product.getPrimaryTaxon.slug }) }}">
+                    {{ product.getPrimaryTaxon.getName }}
+                </a>
+            </div>
+
+            <div id="messages_product_view"></div>
+            <div class="product-view">
+                <div class="product-essential">
+                    {% if product.images|length > 0 %}
+                        {% include 'NileadWebBundle:Frontend/Product/Info:_images.html.twig' %}
+                    {% endif %}
+
+                    <div class="product-shop">
+                        {% include 'NileadWebBundle:Components/Product:recommend.html.twig' %}
+
+                        {% include 'NileadWebBundle:Frontend/Product/Info:_info.html.twig' %}
+                    </div>
+                    <div class="clearer"></div>
+                </div>
+
+                {% include 'NileadWebBundle:Frontend/Product/Info:_tabs.html.twig' %}
+
+                {% include 'NileadWebBundle:Components/Product:related.html.twig' %}
+            </div>
+        </div>
+    </div>
+{% endblock %}

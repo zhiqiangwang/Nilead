@@ -1,0 +1,12 @@
+{% macro menuItem(text, route, params) %}
+    {% set _url = path(route, params) %}
+    {% if _url == app.request.requesturi %}
+        <li class="current">
+            <strong>{{ text }}</strong>
+        </li>
+    {% else %}
+        <li>
+            <a href="{{ _url }}"> {{ text }}</a>
+        </li>
+    {% endif %}
+{% endmacro %}

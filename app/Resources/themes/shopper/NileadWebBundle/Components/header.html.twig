@@ -1,0 +1,144 @@
+<!-- HEADER BOF -->
+<div class="header-container">
+    <div class="top-switch-bg">
+        <div class="row clearfix">
+            <div class="grid_6">
+                <div class="hidden-feature">
+                    <!-- bof: languages -->
+                    <div class="header-switch language-switch">
+                        <span>Language: <span class="current">English</span>
+                        </span>
+                        <div class="header-dropdown">
+                            <ul>
+                                <li class="selected"><a href="javascript:void(0)"><i class="flag en"></i>English</a></li>
+                                <li><a href="javascript:void(0)"><i class="flag fr"></i>French</a></li>
+                                <li><a href="javascript:void(0)"><i class="flag de"></i>German</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="language-select">
+                        <span>Language:</span>
+                        <select name="language_switch" onchange="window.location=this.value">
+                            <option selected="selected" value="0">English</option>
+                            <option value="0">French</option>
+                            <option value="0">German</option>
+                        </select>
+                    </div>
+                    <!-- eof: languages -->
+
+                    <!-- bof: currency -->
+                    <div class="header-switch currency-switch">
+                        <span>Currency: <span class="current">USD</span>
+                        </span>
+                        <div class="header-dropdown">
+                            <ul>
+                                <li><a href="javascript:void(0)">British Pound Sterling - GBP</a></li>
+                                <li><a href="javascript:void(0)">Euro - EUR</a></li>
+                                <li><a href="javascript:void(0)" class="selected">US Dollar - USD</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="currency-select">
+                        <span>Currency:</span>
+                        <select name="currency_switch" onchange="window.location=this.value">
+                            <option value="javascript:void(0)">British Pound Sterling - GBP</option>
+                            <option value="javascript:void(0)">Euro - EUR</option>
+                            <option value="javascript:void(0)" selected="selected">US Dollar - USD</option>
+                        </select>
+                    </div>
+                    <!-- eof: currency -->
+                </div>
+            </div>
+            <div class="grid_6">
+                <ul class="links">
+                    <li><a href="{{ path('nilead.frontend.account.index') }}" title="Account">Account</a></li>
+                    <li class="separator hidden-feature">&nbsp;</li>
+                    <li class="hidden-feature"><a href="javascript:void(0)" title="Wishlist">Wishlist</a></li>
+                    <li class="separator">&nbsp;</li>
+                    <li><a href="{{ path('nilead.frontend.checkout.index') }}" title="Checkout" class="top-link-checkout">Checkout</a></li>
+                    <li class="separator">&nbsp;</li>
+                    {% if app.user %}
+                        <li><a href="{{ path('fos_user_security_logout') }}">Log Out</a></li>
+                    {% else %}
+                        <li><a href="{{ path('fos_user_security_login') }}" title="Log In">Log In</a></li>
+                        <li class="separator">&nbsp;</li>
+                        <li><a href="{{ path('nilead.user_registration_register') }}">Sign Up</a></li>
+                    {% endif %}
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="header-wrapper search-field">
+        <header>
+        <div class="row clearfix">
+            <div class="grid_12 ">
+                <h1 class="logo">
+                    <strong>Magento Commerce</strong>
+                    <a href="{{ path('nilead.frontend.index') }}" title="Nilead Commerce" class="logo">
+                        <p><img src="{{ asset('images/logo.png') }}" class="retina" alt="Shopper Store"/></p>
+                    </a>
+                </h1>
+                <!-- NAVIGATION -->
+
+                <!-- navigation BOF -->
+                <nav class="queldorei">
+                    <div class="nav-top-title">
+                        <div class="icon">
+                            <span></span><span></span><span></span>
+                        </div>
+                        <a href="#">Navigation</a>
+                    </div>
+
+                    {{ nilead_menu_render('main', {
+                        'column_items': 8,
+                        'template': 'NileadWebBundle:Frontend/Menu:main_menu.html.twig'
+                    }) }}
+                </nav>
+                <!-- eof: navigation -->
+
+                <div class="top-dropdowns">
+                    <!-- cart BOF -->
+                    {% include 'NileadWebBundle:Frontend/Cart:cart_top.html.twig' %}
+                    <!-- cart EOF -->
+
+                    <div class="compare-top-title hidden-feature">
+                        <a href="#" class="clearfix" onclick="popWin('http://shopper.queldorei.com/index.php/catalog/product_compare/index/uenc/aHR0cDovL3Nob3BwZXIucXVlbGRvcmVpLmNvbS8,/','compare','top:0,left:0,width=820,height=600,resizable=yes,scrollbars=yes')"><span class="icon"></span>Compare</a>
+                    </div>
+
+                    <div class="compare-top-container hidden-feature">
+                        <div class="compare-top">
+                            <a class="summary" href="#" onclick="popWin('http://shopper.queldorei.com/index.php/catalog/product_compare/index/uenc/aHR0cDovL3Nob3BwZXIucXVlbGRvcmVpLmNvbS8,/','compare','top:0,left:0,width=820,height=600,resizable=yes,scrollbars=yes')"></a>
+                        </div>
+                        <div class="details">
+                            <div class="details-border"></div>
+                            <p class="empty">
+                                You have no items to compare.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="search-top-container">
+                        <form id="search_mini_form" action="http://shopper.queldorei.com/index.php/catalogsearch/result/" method="get">
+                            <div class="form-search">
+                                <input id="search" type="text" name="q" value="" class="input-text"/>
+                                <button type="submit" title="Search"></button>
+                            </div>
+
+                            <div id="search_autocomplete" class="search-autocomplete"></div>
+
+                            <script type="text/javascript">
+                                // //<![CDATA[
+                                // var searchForm = new Varien.searchForm('search_mini_form', 'search', 'Type and hit enter');
+                                // searchForm.initAutocomplete('http://shopper.queldorei.com/index.php/catalogsearch/ajax/suggest/', 'search_autocomplete');
+                                // //]]>
+                            </script>
+                        </form>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+            </div>
+        </div>
+        </header>
+    </div>
+</div>
+<!-- HEADER EOF -->

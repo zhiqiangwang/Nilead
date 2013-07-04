@@ -1,0 +1,6 @@
+{% macro menuItem(text, iconClasses, route, params) %}
+    {% set _url = path(route, params) %}
+    <li{% if _url == app.request.requesturi %} class="active"{% endif %}>
+        <a href="{{ _url }}"><i class="{{ iconClasses }}"></i> {{ text }}</a>
+    </li>
+{% endmacro %}

@@ -1,0 +1,61 @@
+{% extends "NileadWebBundle:Frontend:layout.html.twig" %}
+
+{% from "NileadWebBundle:Frontend/Product:macros.html.twig" import grid %}
+{% from "NileadWebBundle:Frontend/Product:macros.html.twig" import list %}
+
+
+{# TITLE #}
+{% block title %}Shopping Cart{{ parent() }}{% endblock %}
+
+
+{# HEAD #}
+{% block head %}
+    <meta name="description" content="Default Description">
+    <meta name="keywords" content="Magento, Varien, E-commerce">
+
+    {{ parent() }}
+{% endblock %}
+
+
+{# SCRIPTS #}
+{% block scripts %}
+    {{ parent() }}
+
+    <script src="{{ asset('themes/shopper/js/components/footer.js') }}"></script>
+{% endblock %}
+
+
+{# BODY CLASS #}
+{% block body_class %}checkout-cart-index{% endblock %}
+
+
+{# CONTENT #}
+{% block content %}
+<div class="main-container col1-layout">
+    <div class="main row clearfix">
+        <div class="col-main">
+            <div class="cart">
+                {% include 'NileadWebBundle:Frontend/Cart/Summary:_cart.html.twig' %}
+
+                <div class="cart-collaterals row clearfix">
+                    <div class="grid_4">
+                        <?php load('cart/cart_shipping'); ?>
+                    </div>
+
+                    <div class="grid_4">
+                        <?php load('cart/cart_coupon'); ?>
+                    </div>
+
+                    <div class="grid_4">
+                        {% if not cart.empty %}
+                            {% include 'NileadWebBundle:Frontend/Cart/Summary:_cart_total.html.twig' %}
+                        {% endif %}
+                    </div>
+                </div>
+
+                <?php load('cart/slider'); ?>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

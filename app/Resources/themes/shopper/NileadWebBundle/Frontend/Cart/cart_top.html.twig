@@ -1,0 +1,39 @@
+{% set cart = nilead_cart_get() %}
+
+<div class="cart-top-title">
+    <a href="http://shopper.queldorei.com/index.php/checkout/cart/" class="clearfix">
+        <span class="icon"></span>Bag
+    </a>
+</div>
+
+<div class="cart-top-container">
+    <div class="cart-top">
+        <a class="summary" href="{{ path('nilead.frontend.checkout.index') }}"><span>BAG ({{ cart.totalItems }})</span></a>
+    </div>
+
+    <div class="details" style="display: none; opacity: 0;">
+        <div class="details-border"></div>
+        <div class="cart-promotion">Place your promotion here</div>
+
+        {% if cart.empty %}
+            <p class="a-center">
+                You have no items in your shopping cart.
+            </p>
+        {% else %}
+            <p class="block-subtitle text-recently">Recently added item(s)</p>
+
+            {% include 'NileadWebBundle:Frontend/Cart/CartTop:_cart_items.html.twig' %}
+
+            <div class="subtotal-wrapper">
+                <div class="subtotal">
+                    <span class="label">Total:</span> <span class="price">${{ cart.total | number_format(2) }}</span>
+                </div>
+            </div>
+
+            <div class="buttons clearfix">
+                <button type="button" title="View Cart" class="button btn-continue" onclick="setLocation('{{ path('nilead.frontend.cart.summary') }}')"><span><span>View Cart</span></span></button>
+                <button type="button" title="Checkout" class="button btn-checkout" onclick="setLocation('{{ path('nilead.frontend.checkout.index') }}')"><span><span>Continue to Checkout</span></span></button>
+            </div>
+        {% endif %}
+    </div>
+</div>

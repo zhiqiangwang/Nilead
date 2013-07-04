@@ -1,0 +1,123 @@
+{% extends "NileadWebBundle::base.html.twig" %}
+
+
+{# HEAD #}
+{% block head %}
+    {{ parent() }}
+{% endblock %}
+
+
+{# STYLE SHEETS #}
+{% block stylesheets %}
+    <link rel="icon" href="{{ asset('themes/shopper/images/favicon.ico') }}" type="image/x-icon">
+    <link rel="shortcut icon" href="{{ asset('themes/shopper/images/favicon.ico') }}" type="image/x-icon">
+    <link rel="apple-touch-icon" href="{{ asset('themes/shopper/images/apple-touch-icon.png') }}">
+    <link rel="apple-touch-icon" sizes="72x72" href="{{ asset('themes/shopper/images/apple-touch-icon-72x72.png') }}">
+    <link rel="apple-touch-icon" sizes="114x114" href="{{ asset('themes/shopper/images/apple-touch-icon-114x114.png') }}">
+
+    <link rel="stylesheet" href="{{ asset('themes/shopper/css/options.css') }}">
+    <link rel="stylesheet" href="{{ asset('themes/shopper/css/calender.css') }}">
+    <link rel="stylesheet" href="{{ asset('themes/shopper/css/styles.css') }}" media="all">
+    <link rel="stylesheet" href="{{ asset('themes/shopper/css/print.css') }}" media="print">
+    <link rel="stylesheet" href="{{ asset('themes/shopper/css/options.css') }}">
+    <!--[if lt IE 8]><link rel="stylesheet" href="{{ asset('themes/shopper/css/styles-ie.css') }}" media="all"><![endif]-->
+
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:300,400,700">
+
+    <style>
+    .hidden-feature {
+        display: none !important;
+    }
+    </style>
+{% endblock %}
+
+
+{# SCRIPTS #}
+{% block scripts %}
+    <!--[if lt IE 7]><script src="{{ asset('themes/shopper/js/hover.js') }}"></script><![endif]-->
+    <!--[if lt IE 9]><script src="{{ asset('themes/shopper/js/html5.js') }}"></script><![endif]-->
+    <!--[if !IE]><script src="{{ asset('themes/shopper/js/swipe.js') }}"></script><![endif]-->
+    <script src="{{ asset('themes/shopper/js/prototype-1.7.js') }}"></script>
+
+    <!--[if lt IE 7]>
+    <script>
+        <![CDATA[
+        var BLANK_URL = 'blank.html';
+        var BLANK_IMG = 'themes/shopper/images/spacer.gif';
+        ]]>
+    </script>
+    <![endif]-->
+
+    <script>
+        //<![CDATA[
+        // Mage.Cookies.path     = '/';
+        // Mage.Cookies.domain   = '.nilead.vn';
+
+        // optionalZipCountries = ["HK","IE","MO","PA"];
+
+        // var Translator = new Translate([]);
+
+        var Shopper = {};
+        Shopper.price_circle = 1;
+        Shopper.fixed_header = 1;
+        Shopper.totop = 1;
+        Shopper.responsive = 1;
+        Shopper.quick_view = 0;
+        Shopper.shopby_num = '5';
+        Shopper.text = {};
+        Shopper.text.more = 'more...';
+        Shopper.text.less = 'less...';
+        Shopper.anystretch_bg = '';
+        //]]>
+    </script>
+{% endblock %}
+
+
+{# HEADER #}
+{% block header %}
+    {% include 'NileadWebBundle:Components:header.html.twig' %}
+{% endblock %}
+
+
+{# BODY #}
+{% block body %}
+<div class="wrapper">
+    <div class="page">
+        {{ parent() }}
+    </div>
+</div>
+{% endblock %}
+
+
+{# CONTENT #}
+{% block content %}
+    {{ nilead_breadcrumbs()|raw }}
+
+    <div class="main-container col1-layout">
+        <div class="main row clearfix">
+            <div class="col-main">
+                <div class="std">
+                    <div class="home-main">
+                        <?php load('index/featured'); ?>
+
+                        <?php load('index/staff_picked'); ?>
+
+                        <?php load('index/new_products'); ?>
+                    </div>
+
+                    <div class="home-right">
+                        <?php load('aside/slideshow'); ?>
+
+                        <?php load('aside/news_letter'); ?>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+
+{# FOOTER #}
+{% block footer %}
+    {% include 'NileadWebBundle:Components:footer.html.twig' %}
+{% endblock %}

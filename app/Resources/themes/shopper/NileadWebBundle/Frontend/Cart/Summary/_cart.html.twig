@@ -1,0 +1,21 @@
+<div class="page-title title-buttons">
+    <h1>Shopping Cart</h1>
+
+    <ul class="checkout-types">
+        <li>
+            {% if not cart.empty -%}
+                <button type="button" title="Proceed to Checkout" class="button btn-proceed-checkout btn-checkout" onclick="window.location='{{ path('nilead.frontend.checkout.index') }}';">
+                    <span>
+                        <span>Proceed to Checkout</span>
+                    </span>
+                </button>
+            {%- endif %}
+        </li>
+    </ul>
+</div>
+
+{% if cart.empty %}
+    {% include 'NileadWebBundle:Frontend/Cart/Summary:_cart_empty.html.twig' %}
+{% else %}
+    {% include 'NileadWebBundle:Frontend/Cart/Summary:_cart_items.html.twig' %}
+{% endif %}

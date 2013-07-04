@@ -1,0 +1,21 @@
+Options +FollowSymLinks +ExecCGI
+
+
+RewriteEngine On
+
+# we skip all files in /web
+RewriteCond %{REQUEST_URI} ^/web/
+RewriteRule .* - [L]
+
+# we rewrite all other files with .something to /web
+RewriteCond %{REQUEST_URI} \..+$
+RewriteCond %{REQUEST_URI} !\.html$
+RewriteRule ^(.*)$ /web/$1 [L]
+
+# we check if the .html version is in /web (caching)
+RewriteRule ^$ /web/index.html [QSA]
+RewriteRule ^([^.]+)$ /web/$1.html [QSA]
+#####################################################
+
+# no, so we redirect to our front web controller
+RewriteRule ^(.*)$ /web/index.php [QSA,L]

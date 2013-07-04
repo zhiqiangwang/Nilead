@@ -8,6 +8,28 @@ class AppKernel extends Kernel
     public function registerBundles()
     {
         $bundles = array(
+            //  Nilead
+            new Nilead\BreadcrumbsBundle\NileadBreadcrumbsBundle(),
+            new Nilead\CartBundle\NileadCartBundle(),
+            new Nilead\ContactBundle\NileadContactBundle(),
+            new Nilead\InventoryBundle\NileadInventoryBundle(),
+            // new Nilead\LoaderBundle\NileadLoaderBundle(),
+            new Nilead\MenuBundle\NileadMenuBundle(),
+            new Nilead\NotificationsBundle\NileadNotificationsBundle(),
+            new Nilead\PaymentsBundle\NileadPaymentsBundle(),
+            new Nilead\PricingBundle\NileadPricingBundle(),
+            new Nilead\ProductBundle\NileadProductBundle(),
+            new Nilead\ResourceBundle\NileadResourceBundle(),
+            new Nilead\SalesBundle\NileadSalesBundle(),
+            new Nilead\SearchBundle\NileadSearchBundle(),
+            new Nilead\ShipmentsBundle\NileadShipmentsBundle(),
+            new Nilead\TaxonomiesBundle\NileadTaxonomiesBundle(),
+            new Nilead\ThemingBundle\NileadThemingBundle(),
+            new Nilead\UtilityBundle\NileadUtilityBundle(),
+            new Nilead\WebBundle\NileadWebBundle(),
+            new Nilead\CoreBundle\NileadCoreBundle(),
+
+
             //  Core
             new Doctrine\Bundle\DoctrineBundle\DoctrineBundle(),
             new Stof\DoctrineExtensionsBundle\StofDoctrineExtensionsBundle(),
@@ -19,46 +41,24 @@ class AppKernel extends Kernel
             new Symfony\Bundle\TwigBundle\TwigBundle(),
 
 
-            //  3rd party
-            new Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle(),
+            //  3rd Party
+            new FOS\UserBundle\FOSUserBundle(),
             new JMS\AopBundle\JMSAopBundle(),
             new JMS\DiExtraBundle\JMSDiExtraBundle($this),
-            new JMS\SecurityExtraBundle\JMSSecurityExtraBundle(),
             new JMS\I18nRoutingBundle\JMSI18nRoutingBundle(),
+            new JMS\SecurityExtraBundle\JMSSecurityExtraBundle(),
             new JMS\TranslationBundle\JMSTranslationBundle(),
-            new JMS\SerializerBundle\JMSSerializerBundle($this),
-            new FOS\RestBundle\FOSRestBundle(),
-            new FOS\UserBundle\FOSUserBundle(),
-            // new Gregwar\CaptchaBundle\GregwarCaptchaBundle(),
             new Knp\Bundle\MenuBundle\KnpMenuBundle(),
-            new Liip\ThemeBundle\LiipThemeBundle(),
-
-            // Sylius
-            new Sylius\Bundle\ResourceBundle\SyliusResourceBundle(),
-            new Sylius\Bundle\TaxonomiesBundle\SyliusTaxonomiesBundle(),
-            //  Nilead
-            new Nilead\UtilityBundle\NileadUtilityBundle(),
-            new Nilead\WebBundle\NileadWebBundle(),
             new Liip\DoctrineCacheBundle\LiipDoctrineCacheBundle(),
-            new Nilead\LoaderBundle\NileadLoaderBundle(),
-            new Nilead\ThemingBundle\NileadThemingBundle(),
-            new Nilead\ProductBundle\NileadProductBundle(),
-            new Nilead\ShipmentsBundle\NileadShipmentsBundle(),
-            new Nilead\PaymentsBundle\NileadPaymentsBundle(),
-            new Nilead\ContactBundle\NileadContactBundle(),
-            new Nilead\PricingBundle\NileadPricingBundle(),
-            new Nilead\InventoryBundle\NileadInventoryBundle(),
-            new Nilead\MenuBundle\NileadMenuBundle(),
-            new Nilead\SalesBundle\NileadSalesBundle(),
-            new Nilead\ThemingBundle\NileadThemingBundle(),
-            new Nilead\CartBundle\NileadCartBundle(),
-            new Nilead\BreadcrumbsBundle\NileadBreadcrumbsBundle(),
-            new Nilead\ResourceBundle\NileadResourceBundle(),
-            new Nilead\CoreBundle\NileadCoreBundle(),
+            new Liip\ImagineBundle\LiipImagineBundle(),
+            new Liip\ThemeBundle\LiipThemeBundle(),
+            new Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle(),
+            new WhiteOctober\PagerfantaBundle\WhiteOctoberPagerfantaBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {
-//            $bundles[] = new Acme\DemoBundle\AcmeDemoBundle();
+            $bundles[] = new Nilead\SandboxBundle\NileadSandboxBundle();
+
             $bundles[] = new Symfony\Bundle\WebProfilerBundle\WebProfilerBundle();
             $bundles[] = new Sensio\Bundle\DistributionBundle\SensioDistributionBundle();
             $bundles[] = new Sensio\Bundle\GeneratorBundle\SensioGeneratorBundle();
@@ -69,6 +69,6 @@ class AppKernel extends Kernel
 
     public function registerContainerConfiguration(LoaderInterface $loader)
     {
-        $loader->load(__DIR__ . '/config/config_' . $this->getEnvironment() . '.yml');
+        $loader->load(__DIR__.'/config/config_'.$this->getEnvironment().'.yml');
     }
 }

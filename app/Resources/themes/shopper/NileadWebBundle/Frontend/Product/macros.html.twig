@@ -1,0 +1,26 @@
+
+{#% macro list(products) %}
+    {% include "NileadWebBundle:Frontend:Product/_list.html.twig" %}
+{% endmacro %#}
+
+{#% macro grid(products, size = 4) %}
+    {% include "NileadWebBundle:Frontend:Product/_grid.html.twig" %}
+{% endmacro %#}
+
+{% macro list(products) %}
+    {% include "NileadWebBundle:Frontend/Product/Listing:/_list.html.twig" %}
+{% endmacro %}
+
+
+{% macro grid(products) %}
+    {% include "NileadWebBundle:Frontend/Product/Listing:_grid.html.twig" %}
+{% endmacro %}
+
+
+{% macro thumbnails(images) %}
+    <ul id="shopper_gallery_carousel" class="jcarousel-skin-tango clearfix">
+        {% for image in images %}
+            {% include "NileadWebBundle:Frontend/Product/Info:_thumbnail.html.twig" %}
+        {% endfor %}
+    </ul>
+{% endmacro %}

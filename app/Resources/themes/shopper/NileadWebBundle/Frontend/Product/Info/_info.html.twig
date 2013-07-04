@@ -1,0 +1,117 @@
+{% set form = nilead_cart_form({'product': product}) %}
+
+<div class="product-shop-info">
+    <div class="product-name">
+        <h1>{{ product.getName }}</h1>
+    </div>
+
+    <p class="no-rating">
+        <a href="#review-form">Be the first to review this product</a>
+    </p>
+
+    <div class="price-box">
+        <span class="regular-price" id="product-price-{{ product.getId }}">
+        <span class="price">${{ product.getMasterVariant.getPrice|number_format(2, '.') }}</span></span>
+    </div>
+
+    <p class="availability in-stock">
+        {% if product.getMasterVariant.getOnHand %}
+        <span>In stock</span>
+        {% else %}
+        <span>Out of stock</span>
+        {% endif %}
+    </p>
+    <p class="sku hidden-feature">
+        SKU: <span>{% if product.getMasterVariant.getSku %}{{ product.getMasterVariant.getSku }}{% else %}Please select a variant...{% endif %}</span>
+    </p>
+    <div class="clear"></div>
+    <div class="short-description">
+        <div class="std">
+            {{ product.getShortDescription }}
+        </div>
+    </div>
+
+    <form action="{{ path('nilead.frontend.cart.add', {id : product.id}) }}" method="post" class="clearfix">
+        {{ form_widget(form._token) }}
+
+        <div class="">
+            {% if product.isVariantSelectionMethodChoice %}
+            <table class="table table-condensed">
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th>{{ 'Variant Price'|trans }}</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for variant in product.variants if variant.available %}
+                    <tr>
+                        <td>
+                            {% if variant.presentation is empty %}
+                            <ul class="unstyled">
+                                {% for option in variant.options %}
+                                <li><strong>{{ option.presentation }}</strong>: {{ option.value }}</li>
+                                {% endfor %}
+                            </ul>
+                            {% else %}
+                                {{ variant.presentation }}
+                            {% endif %}
+                        </td>
+                        <td>
+                            <span class="label label-success">{{ variant.price }}</span>
+                        </td>
+                        <td>
+                        {% if nilead_inventory_is_available(variant) %}
+                            {{ form_widget(form.variant[loop.index0]) }}
+                        {% else %}
+                            <span class="label label-important">{{ 'Out of Stock'|trans }}</span>
+                        {% endif %}
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+            {% elseif product.isVariantSelectionMethodMatch %}
+                {{ form_widget(form.variant) }}
+            {% elseif product.isVariantSelectionMethodNileadMatch %}
+                {{ form_widget(form.variant) }}
+            {% endif %}
+        </div>
+
+        <div class="qty-container clearfix">
+            {{ form_row(form.quantity, {'attr': {'class': 'input-text qty'}, 'empty_value': '1'}) }}
+        </div>
+
+        <!-- bof: add to cart -->
+        <div class="add-to-box">
+            <div class="add-to-cart">
+                <button type="submit" title="Add to Cart" class="button btn-cart"><span><span>Add to Cart</span></span></button>
+            </div>
+        </div>
+        <span class="ajax_loading" id='ajax_loading{{ product.getId }}'><img src='http://shopper.queldorei.com/skin/frontend/shopper/default/images/ajax-loader.gif'/></span>
+    </form>
+    <!-- eof: add to cart -->
+
+    <!-- bof: add to links -->
+    <ul class="add-to-links hidden-feature">
+        <li class="wishlist"><span class="icon"></span><a href="#" class="link-wishlist" data-id="{{ product.getId }}">Add to Wishlist</a></li>
+        <li class="compare"><span class="icon"></span><a href="#" class="link-compare" data-id="{{ product.getId }}">Add to Compare</a></li>
+        <li class="email-friend"><span class="icon"></span><a href="#">Email to a Friend</a></li>
+    </ul>
+    <!-- bof: add to links -->
+
+    <div class="clear"></div>
+    <!-- bof: AddThis button hidden-feature -->
+    <!-- <div class="addthis_toolbox addthis_default_style ">
+        <a class="addthis_button_preferred_1"></a>
+        <a class="addthis_button_preferred_2"></a>
+        <a class="addthis_button_preferred_3"></a>
+        <a class="addthis_button_preferred_4"></a>
+        <a class="addthis_button_compact"></a>
+        <a class="addthis_counter addthis_bubble_style"></a>
+    </div> -->
+
+    <!-- // <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid=ra-4f574ddc5bcdccbc"></script> -->
+    <!-- eof: AddThis button -->
+</div>

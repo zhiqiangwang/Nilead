@@ -1,0 +1,48 @@
+<tr>
+    <td class="td-image">
+        <a href="{{ path('nilead.frontend.product.info', {'slug': item.variant.product.slug} )}}" title="Midi Dress With Belt" class="product-image">
+            <img src="{{ ('images/' ~ item.variant.images.first.path) | imagine_filter('nilead_200x200') }}" data-srcx2="{{ ('images/' ~ item.variant.images.first.path) | imagine_filter('nilead_400x400') }}" width="200" height="200" alt="{{ item.variant.product.name }}">
+        </a>
+    </td>
+
+    <td class="td-name">
+        <h2 class="product-name">
+            <a href="{{ path('nilead.frontend.product.info', {'slug': item.variant.product.slug} )}}">{{ item.variant.product.name }}</a>
+        </h2>
+
+        <ol>
+            {% for option in item.variant.options %}
+                <li>{{ option.presentation }}: {{ option.value }}</li>
+            {% endfor %}
+        </ol>
+    </td>
+
+    <td class="a-center td-edit">
+        <a href="http://shopper.queldorei.com/index.php/checkout/cart/configure/id/41807/" title="Edit item parameters">Edit</a>
+    </td>
+
+    <td class="a-center td-price">
+        <span class="td-title">Unit Price</span>
+        <span class="cart-price">
+            <span class="price">${{ item.unitPrice | number_format(2) }}</span>
+        </span>
+    </td>
+
+    <td class="a-center td-qty">
+        <span class="td-title">Quantity</span>
+        {{ form_row(form.items[loop.index0].quantity, {'attr': {'class': 'input-text qty'}, 'label': false}) }}
+    </td>
+
+    <td class="a-center td-price">
+        <span class="td-title">Subtotal</span>
+        <span class="cart-price">
+            <span class="price">${{ item.total | number_format(2) }}</span>
+        </span>
+    </td>
+
+    <td class="a-center td-delete">
+        <a href="{{ path('nilead.frontend.cart.remove', {'id': item.id}) }}" title="Remove item" class="btn-remove btn-remove2">Remove item</a>
+        <span class="td-actions"><a class="btn-edit btn-edit2" href="http://shopper.queldorei.com/index.php/checkout/cart/configure/id/41807/" title="Edit item parameters">Edit</a></span>
+        <span class="td-actions"><a class="btn-remove btn-remove2" href="{{ path('nilead.frontend.cart.remove', {'id': item.id}) }}" title="Remove item">Remove item</a></span>
+    </td>
+</tr>

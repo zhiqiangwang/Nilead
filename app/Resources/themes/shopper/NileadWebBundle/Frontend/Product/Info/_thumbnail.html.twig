@@ -1,0 +1,5 @@
+<li>
+    <a href="{{ ('images/' ~ image.path) | imagine_filter('nilead_700x700') }}" class="cloud-zoom-gallery" title="back" rel="useZoom: 'cloud_zoom', smallImage: '{{ ('images/' ~ image.path) | imagine_filter('nilead_494x494') }}'">
+        <img src="{{ ('images/' ~ image.path) | imagine_filter('nilead_126x126') }}" data-srcx2="{{ ('images/' ~ image.path) | imagine_filter('nilead_494x494') }}" alt="back" />
+    </a>
+</li>

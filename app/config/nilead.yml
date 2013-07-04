@@ -1,103 +1,170 @@
 nilead_core:
-  driver: doctrine/orm
+    driver: doctrine/orm
+    changes:
+        role_type:
+            model: Nilead\CoreBundle\Entity\Sales\RoleType
 
 nilead_pricing:
-  driver: doctrine/orm
+    driver: doctrine/orm
 
 nilead_payments:
-  driver: doctrine/orm
-  classes:
-    invoice:
-      model: Nilead\CoreBundle\Entity\Payments\Invoice\Invoice
-    invoice_item:
-      model: Nilead\CoreBundle\Entity\Payments\Invoice\InvoiceItem
+    driver: doctrine/orm
+    classes:
+        invoice:
+            model: Nilead\CoreBundle\Entity\Payments\Invoice\Invoice
+        invoice_item:
+            model: Nilead\CoreBundle\Entity\Payments\Invoice\InvoiceItem
+        payment_method:
+            model: Nilead\PaymentsBundle\Entity\DefaultPaymentMethod
+        payment:
+            model: Nilead\PaymentsBundle\Entity\DefaultPayment
+        transaction:
+            model: Nilead\PaymentsBundle\Entity\DefaultTransaction
 
 nilead_sales:
-  driver: doctrine/orm
-  classes:
-    order_item:
-      model:  Nilead\CoreBundle\Entity\Sales\OrderItem
+    driver: doctrine/orm
+    classes:
+        order_item:
+            model: Nilead\CoreBundle\Entity\Sales\OrderItem
+        order:
+            model: Nilead\CoreBundle\Entity\Sales\Order
 
 nilead_product:
-  driver: doctrine/orm
-  classes:
-    product:
-      model: Nilead\CoreBundle\Entity\Product\Product
-      controller: Nilead\CoreBundle\Controller\ProductController
-      repository: Nilead\CoreBundle\Repository\ProductRepository
-      form: Nilead\CoreBundle\Form\Type\ProductType
-    variant:
-      model: Nilead\CoreBundle\Entity\Product\Variant\Variant
-      form: Nilead\CoreBundle\Form\Type\VariantType
+    driver: doctrine/orm
+    classes:
+        product:
+            model: Nilead\CoreBundle\Entity\Product\Product
+            form: Nilead\CoreBundle\Form\Type\ProductType
+        variant:
+            model: Nilead\CoreBundle\Entity\Product\Variant\Variant
+            form: Nilead\CoreBundle\Form\Type\VariantType
 
 nilead_shipments:
-  driver: doctrine/orm
-  classes:
-    shipment:
-      model: Nilead\CoreBundle\Entity\Shipments\Shipment
-    shipment_item:
-      model: Nilead\CoreBundle\Entity\Shipments\ShipmentItem
-    picklist_item:
-      model: Nilead\CoreBundle\Entity\Shipments\PicklistItem
+    driver: doctrine/orm
+    classes:
+        shipment:
+            model: Nilead\CoreBundle\Entity\Shipments\Shipment
+        shipment_item:
+            model: Nilead\CoreBundle\Entity\Shipments\ShipmentItem
+#        picklist_item:
+#            model: Nilead\CoreBundle\Entity\Shipments\PicklistItem
 
 nilead_contact:
-  driver: doctrine/orm
-  classes:
-    organization:
-      model: Nilead\CoreBundle\Entity\Contact\Organization
-    party:
-      model: Nilead\CoreBundle\Entity\Contact\Party
-    party_type:
-      model: Nilead\CoreBundle\Entity\Contact\PartyType
+    driver: doctrine/orm
+    classes:
+        party:
+            model: Nilead\CoreBundle\Entity\Contact\Party
+        party_type:
+            model: Nilead\CoreBundle\Entity\Contact\PartyType
 
 nilead_inventory:
-  driver: doctrine/orm
-
-nilead_sales:
-  driver: doctrine/orm
-  classes:
-    order_item:
-      model:  Nilead\CoreBundle\Entity\Sales\OrderItem
-  backorders: true
-  # classes:
-  #   inventory_item:
-  #     model: Nilead\CoreBundle\Entity\InventoryItem
-  #   inventory_adjustment:
-  #     model: Nilead\CoreBundle\Entity\InventoryAdjustment
+    driver: doctrine/orm
+    backorders: true
+    # classes:
+    #     inventory_item:
+    #         model: Nilead\CoreBundle\Entity\InventoryItem
+    #     inventory_adjustment:
+    #         model: Nilead\CoreBundle\Entity\InventoryAdjustment
 
 nilead_cart:
-  driver: doctrine/orm # Configure the doctrine orm driver used in documentation.
-  resolver: nilead.resolver.cart_item # The id of our newly created service.
-  classes:
-    cart:
-      model: Nilead\CoreBundle\Entity\Cart\Cart
-    item:
-      model: Nilead\CoreBundle\Entity\Cart\CartItem
-      form: Nilead\CoreBundle\Form\Type\CartItemType
+    driver: doctrine/orm # Configure the doctrine orm driver used in documentation.
+    resolver: nilead.resolver.cart_item # The id of our newly created service.
+    classes:
+        cart:
+            model: Nilead\CoreBundle\Entity\Cart\Cart
+        item:
+            model: Nilead\CoreBundle\Entity\Cart\CartItem
+            form: Nilead\CoreBundle\Form\Type\CartItemType
 
-sylius_resource:
-  resources:
-    nilead.user:
-      driver: doctrine/orm
-      classes:
-        model: Nilead\CoreBundle\Entity\User
+nilead_notifications:
+    driver: doctrine/orm # Configure the doctrine orm driver used in documentation.
 
-sylius_taxonomies:
-  driver: doctrine/orm
 
-# for nilead loader
-liip_doctrine_cache:
-  namespaces:
-    nilead_loader:
-      # cache type is "file_system"
-      type: file_system
+nilead_breadcrumbs:
+    # resolver: nilead.resolver.breadcrumb_item
+    # last_item_link: false
+
+    # first_and_last_class: false
+    # divider_text: /
+    # html:
+    #     list_tag: ul
+    #     list_id: breadcrumb
+    #     list_class: breadcrumb
+
+    #     item_tag: li
+    #     item_class: ~
+
+    #     first_item_class: first
+    #     last_item_class: last
+
+    #     divider_tag: span
+    #     divider_class: divider
+
+nilead_menu:
+    twig:
+        template: NileadWebBundle:Frontend:Menu/menu.html.twig
+    options:
+        depth: null
+        currentAsLink: true
+        currentClass: active
+        ancestorClass: current_ancestor
+        firstClass: first
+        lastClass: last
+        compressed: true
+        allow_safe_labels: true
+        clear_matcher: true
+
+nilead_taxonomies:
+    driver: doctrine/orm
+    classes:
+        taxonomy:
+            model: Nilead\TaxonomiesBundle\Entity\DefaultTaxonomy
+        taxon:
+            model: Nilead\TaxonomiesBundle\Entity\DefaultTaxon
+
+
+nilead_resource:
+    # resources:
+    #     nilead.user:
+    #         driver: doctrine/orm
+    #         classes:
+    #             model: Nilead\CoreBundle\Entity\User
 
 
 parameters:
-  nilead_shipments.manager.shipment.default.class:      Nilead\CoreBundle\Manager\ShipmentManager
-  nilead_loader.settings:
-    filters:
-      minify:
-        combine: false
+    nilead_shipments.manager.shipment.default.class: Nilead\CoreBundle\Manager\ShipmentManager
 
-  nilead_loader.path_patterns: []
+    nilead_search:
+        default_engine: doctrine
+        limit:    50
+
+    nilead_loader.settings:
+        filters:
+            minify:
+                combine: false
+
+    nilead_payments:
+        gateways:
+            paypal_express:
+                test_mode: true
+                options:
+                    username: null
+                    password: null
+                    signature: null
+                    testMode: null
+                test_options:
+                    username: seller_api1.rubikin.com
+                    password: 1372327835
+                    signature: AFcWxV21C7fd0v3bYYYRCpSSRl31Ab4AU.5W376qssp0fZ3RFh7DyFRL
+                    testMode: true
+                parameters:
+                    amount: null
+                    currency: null
+                    transactionId: null
+                    description: null
+                    returnUrl: http://nilead.vn/checkout/callback
+                    cancelUrl: http://rubikin.no-ip.org/cancel
+                    notifyUrl: http://nilead.vn/checkout/callback
+                    headerImageUrl: http://www.google.com.vn/images/srpr/logo4w.png
+
+    nilead_loader.path_patterns: []

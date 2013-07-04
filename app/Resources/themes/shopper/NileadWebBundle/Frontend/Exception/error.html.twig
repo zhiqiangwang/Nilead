@@ -1,0 +1,50 @@
+{% extends "NileadWebBundle:Frontend:layout.html.twig" %}
+
+
+{# TITLE #}
+{% block title %}Error{{ parent() }}{% endblock %}
+
+
+{# SCRIPTS #}
+{% block scripts %}
+    {{ parent() }}
+
+    <script src="{{ asset('themes/shopper/js/components/footer.js') }}"></script>
+{% endblock %}
+
+
+{# CONTENT #}
+{% block content %}
+<div class="main-container col1-layout">
+    <div class="main row clearfix">
+        <div class="col-main">
+            <div class="std">
+                <div class="page-head-alt">
+                    <h3>Whoops, our bad...</h3>
+                </div>
+
+                <dl>
+                    <dt>The server returned a "{{ status_code }} {{ status_text }}".</dt>
+                    <dd>
+                        <ul class="disc">
+                            <li>If you typed the URL directly, please make sure the spelling is correct.</li>
+                            <li>If you clicked on a link to get here, the link is outdated.</li>
+                        </ul>
+                    </dd>
+                </dl>
+                <p>&nbsp;</p>
+                <dl>
+                    <dt>What can you do?</dt>
+                    <dd>Have no fear, help is near! There are many ways you can get back on track with <strong>Nilead Demo Store</strong>.</dd>
+                    <dd>
+                        <ul class="buttons">
+                            <li><button class="button" onclick="history.go(-1);"><span><span>Go back</span></span></button></li>
+                            <li><button class="button" onclick="window.location.href = '/';"><span><span>Store Home</span></span></button></li>
+                        </ul>
+                    </dd>
+                </dl>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,86 @@
+{% extends "NileadWebBundle:Frontend:Menu/knp_menu.html.twig" %}
+
+
+{# LIST #}
+{% block list %}
+    {% if item.hasChildren and options.depth is not sameas(0) and item.displayChildren %}
+        {% import "NileadWebBundle:Frontend:Menu/macros.html.twig" as knp_menu %}
+
+        {% if not item.getParent() %}
+            {{ block('list_root') }}
+        {% else %}
+            {{ block('list_child') }}
+        {% endif %}
+    {% endif %}
+{% endblock %}
+
+
+{# LIST ROOT #}
+{% block list_root %}
+<ul id="queldoreiNav" {{ knp_menu.attributes(listAttributes) }}>
+    {{ block('children') }}
+</ul>
+{% endblock %}
+
+
+{# LIST CHILD #}
+{% block list_child %}
+<div class="sub-wrapper">
+    <ul {{ knp_menu.attributes(listAttributes) }}>
+        {{ block('children') }}
+    </ul>
+</div>
+{% endblock %}
+
+
+{# CHILDREN #}
+{% block children %}
+    {# save current variables #}
+    {% set currentOptions = options %}
+    {% set currentItem = item %}
+    {# update the depth for children #}
+    {% if options.depth is not none %}
+        {% set options = currentOptions|merge({'depth': currentOptions.depth - 1}) %}
+    {% endif %}
+
+    {% set counter = 0 %}
+    {% set isChildren = false %}
+    {% for item in currentItem.children %}
+        {% set isChildren = item.parent.parent ? true : false %}
+
+        {% if options.column_items is defined and counter % options.column_items == 0 and isChildren %}
+            <li><ol>
+        {% endif %}
+
+        {{ block('item') }}
+
+        {% if options.column_items is defined and (counter + 1) % options.column_items == 0 and isChildren %}
+            </ol></li>
+        {% endif %}
+        {% set counter = counter + 1 %}
+    {% endfor %}
+
+    {% if options.column_items is defined and (counter) % options.column_items != 0 and isChildren %}
+        </ol></li>
+    {% endif %}
+
+    {# restore current variables #}
+    {% set item = currentItem %}
+    {% set options = currentOptions %}
+{% endblock %}
+
+
+{# LINK ELEMENT #}
+{% block linkElement %}
+    {% import "NileadWebBundle:Frontend:Menu/macros.html.twig" as knp_menu %}
+
+    <a href="{{ item.uri }}"{{ knp_menu.attributes(item.linkAttributes) }}>
+        <span>{{ block('label') }}</span>
+    </a>
+{% endblock %}
+
+
+{# LABEL #}
+{% block label %}
+    {{ item.label|raw }}
+{% endblock %}

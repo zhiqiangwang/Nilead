@@ -1,0 +1,47 @@
+{% extends "NileadWebBundle:Frontend:Menu/knp_menu.html.twig" %}
+
+
+{# LIST #}
+{% block list %}
+    {% if item.hasChildren and options.depth is not sameas(0) and item.displayChildren %}
+        {% import "NileadWebBundle:Frontend:Menu/macros.html.twig" as knp_menu %}
+
+        {% if not item.getParent() %}
+            {{ block('list_root') }}
+        {% else %}
+            {{ block('list_child') }}
+        {% endif %}
+    {% endif %}
+{% endblock %}
+
+
+{# LIST ROOT #}
+{% block list_root %}
+<div class="block block-left-nav">
+    <div class="block-title">
+        <strong><span>{{ item.name }}</span></strong>
+    </div>
+
+    <div class="block-content">
+        <ul id="left-nav">
+            {{ block('children') }}
+        </ul>
+    </div>
+</div>
+{% endblock %}
+
+
+{# LIST CHILD #}
+{% block list_child %}
+<div class="sub-wrapper">
+    <ul>
+        {{ block('children') }}
+    </ul>
+</div>
+{% endblock %}
+
+
+{# LABEL #}
+{% block label %}
+    {{ item.label|raw }}
+{% endblock %}

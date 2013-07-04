@@ -1,0 +1,14 @@
+<div class="product-tabs-content tabs-content" id="product_tabs_additional_tabbed_contents" style="">
+    <h2>Additional Information</h2>
+    <table class="data-table" id="product-attribute-specs-table">
+        <colgroup>
+            <col width="25%">
+            <col>
+        </colgroup>
+        <tbody>
+            {% for property in product.properties %}
+                {% include 'NileadWebBundle:Frontend/Product/Info:_property.html.twig' %}
+            {% endfor %}
+        </tbody>
+    </table>
+</div>

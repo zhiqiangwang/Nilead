@@ -1,0 +1,107 @@
+{% extends "NileadWebBundle:Frontend:layout.html.twig" %}
+
+{% from "NileadWebBundle:Frontend/Product:macros.html.twig" import grid %}
+{% from "NileadWebBundle:Frontend/Product:macros.html.twig" import list %}
+
+
+{# TITLE #}
+{% block title %}{{ category.name }}{{ parent() }}{% endblock %}
+
+
+{# HEAD #}
+{% block head %}
+    <meta name="description" content="Default Description">
+    <meta name="keywords" content="Magento, Varien, E-commerce">
+
+    {{ parent() }}
+{% endblock %}
+
+
+{# SCRIPTS #}
+{% block scripts %}
+    {{ parent() }}
+
+    <script src="{{ asset('themes/shopper/js/components/footer.js') }}"></script>
+{% endblock %}
+
+
+{# BODY CLASS #}
+{% block body_class %}catalog-category-view{% endblock %}
+
+
+{# CONTENT #}
+{% block content %}
+<!-- <div class="block block-left-nav masonry-brick" style="position: fixed; z-index: 999; top: 50%; left: 50%; width: 300px; margin-top: -100px; margin-left: -150px;">
+    <div class="block-title">
+        <strong><span>Popup Title</span></strong>
+    </div>
+
+    <div class="block-content">
+        <p>This feature is under development...</p>
+
+        <div class="block-title"></div>
+
+        <p>
+            <button class="button button_white" onclick="window.location='http://shopper.queldorei.com/index.php/women.html/'">
+                <span>
+                    <span>check it out</span>
+                </span>
+            </button>
+        </p>
+    </div>
+</div> -->
+
+<div class="main-container col2-left-layout">
+    <div class="main row">
+        {{ nilead_breadcrumbs()|raw }}
+
+        <div class="col-main">
+            {% if data|length > 0 %}
+            {# TODO: Add category images to database #}
+            <p class="category-image">
+                <img src="http://shopper.queldorei.com/media/catalog/category/banner_05.jpg" alt="Dresses" title="Dresses"/>
+            </p>
+
+            <div class="category-products">
+                {% include 'NileadWebBundle:Frontend/Product/Listing:_toolbar.html.twig' %}
+
+                {% if app.request.query.all.mode|default('grid')|lower == 'list' %}
+                    {{ list(data) }}
+                {% else %}
+                    {{ grid(data) }}
+                {% endif %}
+
+                <div class="toolbar-bottom">
+                    {% include 'NileadWebBundle:Frontend/Product/Listing:_toolbar.html.twig' %}
+                </div>
+            </div>
+            {% else %}
+                {% include 'NileadWebBundle:Frontend/Product/Listing:_no_product.html.twig' %}
+            {% endif %}
+        </div>
+
+        <div class="col-left sidebar">
+            {{ nilead_menu_render(nilead_menu_master(category).name, {
+                'column_items': 5,
+                'template': 'NileadWebBundle:Frontend/Menu:category_menu.html.twig'
+            }) }}
+
+            {% include 'NileadWebBundle:Components/Product:best_seller.html.twig' %}
+
+            <?php load('product_listing/price'); ?>
+
+            <?php load('product_listing/shop_by'); ?>
+
+            {% include 'NileadWebBundle:Components/Product:slideshow.html.twig' %}
+
+            {% include 'NileadWebBundle:Components/Product:tags.html.twig' %}
+
+            {% include 'NileadWebBundle:Components/Product:news_letter.html.twig' %}
+
+            {% include 'NileadWebBundle:Components/Product:compare.html.twig' %}
+
+            {% include 'NileadWebBundle:Components/Product:poll.html.twig' %}
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,6 +1,10 @@
-nilead_web:
+nilead:
     resource: "@NileadWebBundle/Resources/config/routing/main.xml"
     prefix:   /
+
+nilead_sandbox:
+    resource: "@NileadSandboxBundle/Resources/config/routing.xml"
+    prefix: /sandbox
 
 _wdt:
     resource: "@WebProfilerBundle/Resources/config/routing/wdt.xml"

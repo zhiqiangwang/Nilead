@@ -1,0 +1,13 @@
+{% from "NileadWebBundle:Frontend/Product:macros.html.twig" import grid %}
+
+
+<div class="category-products">
+    <h2>Featured Products</h2>
+
+    <ul class="products-grid two_columns_3">
+        {% for product in products %}
+            {% include 'NileadWebBundle:Frontend/Product/Listing:_grid_item.html.twig' %}
+        {% endfor %}
+    </ul>
+    <div class="clear"></div>
+</div>

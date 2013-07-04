@@ -1,0 +1,5 @@
+<ol id="cart-sidebar" class="mini-products-list">
+    {% for item in cart.items %}
+        {% include 'NileadWebBundle:Frontend/Cart/CartTop:_item.html.twig' %}
+    {% endfor %}
+</ol>

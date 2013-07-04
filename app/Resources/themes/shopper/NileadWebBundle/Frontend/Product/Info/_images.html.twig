@@ -1,0 +1,19 @@
+{% from "NileadWebBundle:Frontend/Product:macros.html.twig" import thumbnails %}
+
+<div class="product-img-box" style="width:512px">
+    <div class="new-label new-top-right"></div>
+    <p class="product-image">
+        <a href="{{ ('images/' ~ product.image.path) | imagine_filter('nilead_700x700') }}" class="cloud-zoom" id="cloud_zoom" rel="position:'right',showTitle:false,lensOpacity:0.5,smoothMove:3">
+            <img src="{{ ('images/' ~ product.image.path) | imagine_filter('nilead_494x494') }}" data-srcx2="{{ ('images/' ~ product.image.path) | imagine_filter('nilead_494x494') }}" alt="{{ product.getName }}" title="{{ product.getName }}" />
+        </a>
+    </p>
+
+    <div class="more-views">
+        {{ thumbnails(product.images) }}
+
+        <div class="jcarousel-controls">
+            <a href="#" class="jcarousel-prev-horizontal" id="shopper_gallery_prev"></a>
+            <a href="#" class="jcarousel-next-horizontal" id="shopper_gallery_next"></a>
+        </div>
+    </div>
+</div>

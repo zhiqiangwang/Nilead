@@ -1,0 +1,150 @@
+{% extends "NileadWebBundle:Frontend/Account:index.html.twig" %}
+
+
+{# TITLE #}
+{% block title %}My Orders{% endblock %}
+
+
+{# HEAD #}
+{% block head %}
+    <meta name="description" content="Default Description">
+    <meta name="keywords" content="Magento, Varien, E-commerce">
+
+    {{ parent() }}
+{% endblock %}
+
+{# BODY CLASS#}
+{% block body_class %}sales-order-history{% endblock %}
+
+{# CONTENT #}
+{% block content %}
+    <div class="main-container col2-left-layout">
+        <div class="page-title-bg" style="height: 90px;"></div>
+        <div class="main row">
+            <div class="col-main">
+                <div class="my-account">
+                    <div class="page-title">
+                        <h1>My Orders</h1>
+                    </div>
+                    {% if orders|length > 0 %}
+                        <table class="table table-bordered table-hover table-striped">
+                            <thead>
+                            <tr>
+                                <th>Order #</th>
+                                <th>Date</th>
+                                <th>Totals</th>
+                                <th>Status</th>
+                                <th>Control</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            {% for order in orders %}
+                                <tr>
+                                    <td>{{ order.guid }}</td>
+                                    <td>{{ order.orderDate|date('Y-m-d') }}</td>
+                                    <td>{{ order.total }}</td>
+                                    <td>{{ order.getCurrentStatus() }}</td>
+                                    <td><a href="{{ path('nilead.frontend.account.view_order',{'id':order.id}) }}">View Order</a></td>
+                                </tr>
+                            {% endfor %}
+                            </tbody>
+                        </table>
+                    {% else %}
+                        <p>You have placed no orders.</p>
+                    {% endif %}
+                    <div class="pager">
+
+                        <p class="amount">
+                            <strong>2 Item(s)</strong>
+                        </p>
+
+                        <div class="limiter">
+                            <label>Show</label>
+                            <select onchange="setLocation(this.value)">
+                                <option selected="selected" value="http://shopper.queldorei.com/index.php/sales/order/history/?limit=10">
+                                    10            </option>
+                                <option value="http://shopper.queldorei.com/index.php/sales/order/history/?limit=20">
+                                    20            </option>
+                                <option value="http://shopper.queldorei.com/index.php/sales/order/history/?limit=50">
+                                    50            </option>
+                            </select> per page    </div>
+
+
+                    </div>
+                    <table id="my-orders-table" class="data-table">
+                        <colgroup><col width="1">
+                            <col width="1">
+                            <col>
+                            <col width="1">
+                            <col width="1">
+                            <col width="1">
+                        </colgroup><thead>
+                    <tr class="first last">
+                        <th>Order #</th>
+                        <th>Date</th>
+                        <th>Ship To</th>
+                        <th><span class="nobr">Order Total</span></th>
+                        <th><span class="nobr">Order Status</span></th>
+                        <th>&nbsp;</th>
+                    </tr>
+                    </thead>
+                        <tbody>
+                        <tr class="first odd">
+                            <td><span class="title">Order #</span>100000916</td>
+                            <td><span class="title">Date</span><span class="nobr">6/19/13</span></td>
+                            <td><span class="title">Ship To</span>test nguyen</td>
+                            <td><span class="title">Order Total</span><span class="price">$2,129.99</span></td>
+                            <td><span class="title">Order Status</span><em>Pending</em></td>
+                            <td class="a-center last"><span class="title"></span>
+                <span class="nobr"><a href="http://shopper.queldorei.com/index.php/sales/order/view/order_id/1046/">View Order</a>
+                                                        </span>
+                            </td>
+                        </tr>
+                        <tr class="last even">
+                            <td><span class="title">Order #</span>100000915</td>
+                            <td><span class="title">Date</span><span class="nobr">6/19/13</span></td>
+                            <td><span class="title">Ship To</span>test nguyen</td>
+                            <td><span class="title">Order Total</span><span class="price">$239.00</span></td>
+                            <td><span class="title">Order Status</span><em>Pending</em></td>
+                            <td class="a-center last"><span class="title"></span>
+                <span class="nobr"><a href="http://shopper.queldorei.com/index.php/sales/order/view/order_id/1045/">View Order</a>
+                                                            <span class="separator">|</span> <a class="link-reorder" href="http://shopper.queldorei.com/index.php/sales/order/reorder/order_id/1045/">Reorder</a>
+                                </span>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <script type="text/javascript">decorateTable('my-orders-table');</script>
+                    <div class="pager">
+
+                        <p class="amount">
+                            <strong>2 Item(s)</strong>
+                        </p>
+
+                        <div class="limiter">
+                            <label>Show</label>
+                            <select onchange="setLocation(this.value)">
+                                <option selected="selected" value="http://shopper.queldorei.com/index.php/sales/order/history/?limit=10">
+                                    10            </option>
+                                <option value="http://shopper.queldorei.com/index.php/sales/order/history/?limit=20">
+                                    20            </option>
+                                <option value="http://shopper.queldorei.com/index.php/sales/order/history/?limit=50">
+                                    50            </option>
+                            </select> per page    </div>
+
+
+                    </div>
+                    <div class="buttons-set">
+                        <p class="back-link"><a href="http://shopper.queldorei.com/index.php/review/customer/"><small>« </small>Back</a></p>
+                    </div>
+                    {% for flashMessage in app.session.flashbag.get('notice') %}
+                        <div class="flash-notice">
+                            {{ flashMessage }}
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+            {% include 'NileadWebBundle:Frontend/Account:menu_left.html.twig' %}
+        </div>
+    </div>
+{% endblock %}

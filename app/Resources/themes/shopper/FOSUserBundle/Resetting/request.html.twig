@@ -1,0 +1,76 @@
+{% extends "NileadWebBundle:Frontend:layout.html.twig" %}
+
+
+{# TITLE #}
+{% block title %}Forget Password{{ parent() }}{% endblock %}
+
+
+{# HEAD #}
+{% block head %}
+    <meta name="description" content="Default Description">
+    <meta name="keywords" content="Magento, Varien, E-commerce">
+
+    {{ parent() }}
+{% endblock %}
+
+
+{% block body_class %}customer-account-login{% endblock %}
+
+
+{# FOOTER #}
+{% block footer %}
+    {% include 'NileadWebBundle:Components/Login:footer.html.twig' %}
+{% endblock %}
+
+
+{# SCRIPTS #}
+{% block scripts %}
+    {{ parent() }}
+
+    <script src="{{ asset('themes/shopper/js/pages/login.js') }}"></script>
+{% endblock %}
+
+
+{# CONTENT #}
+{% block content %}
+
+<div class="main-container col1-layout">
+    <div class="main row clearfix">
+        <div class="col-main">
+            <div class="account-login">
+                <div class="block block-login">
+                    <div class="block-slider">
+                        <ul class="slides">
+                            <li>
+                                <div class="block-title">
+                                    <strong><span>Forget Password</span></strong>
+                                </div>
+                                <div class="block-content">
+                                    <form id="form-validate" action="{{ path('fos_user_resetting_send_email') }}" method="POST" class="fos_user_resetting_request">
+                                        <ul class="form-list">
+                                            <li>
+                                                {% if invalid_username is defined %}
+                                                    <p>{{ 'resetting.request.invalid_username'|trans({'%username%': invalid_username}, 'FOSUserBundle') }}</p>
+                                                {% endif %}
+                                                <label for="username" class="required">{{ 'resetting.request.username'|trans({}, 'FOSUserBundle') }}</label>
+                                                <div class="input-box">
+                                                    <input type="text" id="username" name="username"  class="input-text required-entry validate-email" value="" />
+                                                </div>
+                                            </li>
+                                        </ul>
+                                        <button type="submit" class="button" title="{{ 'resetting.reset.submit'|trans({}, 'FOSUserBundle') }}"><span><span>submit</span></span></button>
+                                        <a href="{{ path('fos_user_security_login') }}" class="forgot-password" id="back-login">Back to Login?</a>
+                                    </form>
+                                    <br/>
+                                </div>
+                                <div class="new-users">
+                                    <button onclick="window.location='{{ path('nilead.user_registration_register') }}';" class="button invert" title="Register" type="button"><span><span>Register</span></span></button>
+                                </div>
+                            </li>
+                         </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

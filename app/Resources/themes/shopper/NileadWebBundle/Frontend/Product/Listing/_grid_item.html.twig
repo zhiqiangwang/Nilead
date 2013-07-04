@@ -1,0 +1,77 @@
+{% if product.image %}
+    {% set imagePath = 'images/' ~ product.image.path %}
+{% else %}
+    {% set imagePath = 'images/' ~ 'no-image-large.gif' %}
+{% endif %}
+
+
+<li class="item">
+    <div class="regular">
+        <a href="#" title="{{ product.name }}" class="product-image">
+            <div class="new-label new-top-right"></div>
+            <img src="{{ imagePath | imagine_filter('nilead_252x252') }}" data-srcx2="{{ imagePath | imagine_filter('nilead_504x504') }}" width="252" height="252" alt="{{ product.name }}"/>
+        </a>
+        <div class="product-info">
+            <div class="button-container">
+                <button type="button" title="Add to Cart" class="button btn-cart ajax-cart" data-url="{{ path('nilead.frontend.cart.add',{'id': product.id}) }}" data-id="{{ product.id }}">
+                    <span>
+                        <span>Add to Cart</span>
+                    </span>
+                </button>
+            </div>
+
+            <a class="product-name" href="#" title="{{ product.name }}">{{ product.name }}</a>
+
+            <div class="price-box">
+                <span class="regular-price" id="product-price-{{ product.id }}">
+                    <span class="price">${{ product.masterVariant.price|number_format(2) }}</span>
+                </span>
+            </div>
+        </div>
+    </div>
+
+    <div class="hover">
+        <a href="{{ path('nilead.frontend.product.info', {'slug': product.slug}) }}" data-fancybox-group="gallery" class="fancybox quick-view" id="fancybox{{ product.id }}">quick view</a>
+        <a href="{{ path('nilead.frontend.product.info', {'slug': product.slug}) }}" title="{{ product.name }}" class="product-image">
+            <div class="new-label new-top-right"></div>
+            <img src="{{ imagePath | imagine_filter('nilead_252x252') }}" data-srcx2="{{ imagePath | imagine_filter('nilead_504x504') }}" width="252" height="252" alt="{{ product.name }}"/>
+        </a>
+
+        <a href="{{ path('nilead.frontend.product.info', {'slug': product.slug}) }}" title="{{ product.name }}">
+            <div class="price-box">
+                <span class="regular-price" id="product-price-{{ product.id }}">
+                <span class="price"><sup>$</sup>234.00</span></span>
+            </div>
+        </a>
+
+        <a class="product-name" href="{{ path('nilead.frontend.product.info', {'slug': product.slug}) }}" title="{{ product.name }}">{{ product.name }}</a>
+        <div class="ratings">
+            <div class="rating-box">
+                <div class="rating" style="width:100%"></div>
+            </div>
+
+            <p class="rating-links">
+                <a href="#review-url">1 Review(s)</a>
+                <span class="separator">|</span>
+                <a href="#review-form">Add Your Review</a>
+            </p>
+        </div>
+
+        <div class="button-container">
+            <button type="button" title="Add to Cart" class="button btn-cart ajax-cart" data-url="{{ path('nilead.frontend.cart.add',{'id': product.id}) }}" data-id="{{ product.id }}">
+                <span>
+                    <span>
+                        <em></em>
+                        Add to Cart
+                    </span>
+                </span>
+            </button>
+        </div>
+
+        <span class="ajax_loading" id="ajax_loading{{ product.id }}"><img src="http://shopper.queldorei.com/skin/frontend/shopper/default/images/ajax-loader.gif"/></span>
+        <ul class="add-to-links">
+            <li><a href="#add-to-wishlist" class="link-wishlist" data-id="{{ product.id }}"><span>+</span>Add to Wishlist</a></li>
+            <li><a href="#add-to-compare" class="link-compare" data-id="{{ product.id }}"><span>+</span>Add to Compare</a></li>
+        </ul>
+    </div>
+</li>

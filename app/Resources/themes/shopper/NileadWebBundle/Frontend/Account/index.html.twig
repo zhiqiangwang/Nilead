@@ -1,0 +1,45 @@
+{% extends "NileadWebBundle:Frontend:layout.html.twig" %}
+
+
+{# TITLE #}
+{% block title %}Account{% endblock %}
+
+
+{# HEAD #}
+{% block head %}
+    <meta name="description" content="Default Description">
+    <meta name="keywords" content="Magento, Varien, E-commerce">
+
+    {{ parent() }}
+{% endblock %}
+
+
+{% block body_class %}customer-account-edit{% endblock %}
+
+
+{# FOOTER #}
+{% block footer %}
+    {% include 'NileadWebBundle:Components/Account:footer.html.twig' %}
+{% endblock %}
+
+
+{# SCRIPTS #}
+{% block scripts %}
+    {{ parent() }}
+
+    <script src="{{ asset('themes/shopper/js/components/account/dashboard.js') }}"></script>
+{% endblock %}
+
+
+{# CONTENT #}
+{% block content %}
+    <div class="main-container col2-left-layout">
+        <div class="page-title-bg" style="height: 90px;"></div>
+        <div class="main row">
+            {% include 'NileadWebBundle:Frontend/Account:dashboard.html.twig' %}
+            {% include 'NileadWebBundle:Frontend/Account:menu_left.html.twig' %}
+
+            {% block back_url %}<p class="back-link"><a href="{{ path("nilead.frontend.account.index") }}"><small>&laquo; </small>Back</a></p>{% endblock %}
+        </div>
+    </div>
+{% endblock %}

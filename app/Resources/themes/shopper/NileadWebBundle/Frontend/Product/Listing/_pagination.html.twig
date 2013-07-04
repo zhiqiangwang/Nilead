@@ -1,0 +1,11 @@
+{% from "NileadWebBundle:Macros:misc.html.twig" import pagination %}
+
+
+<div class="pager">
+    <p class="amount">Items {{ data.getCurrentPageOffsetStart() }} to {{ data.getCurrentPageOffsetEnd() }} of {{ data.getNbResults() }} total</p>
+
+    <div class="pages">
+        <strong>Page:</strong>
+        {{ pagination(data) }}
+    </div>
+</div>

@@ -1,0 +1,69 @@
+<div class="toolbar">
+    <div class="sorter">
+        <div class="sort-by toolbar-switch">
+            <div class="toolbar-title">
+                <label>Sort By</label>
+                <span class="current">Position</span>
+                <select onchange="setLocation(this.value)">
+                    <option selected="selected" value="http://shopper.queldorei.com/index.php/women/dresses.html?dir=asc&amp;order=position">Position</option>
+                    <option value="http://shopper.queldorei.com/index.php/women/dresses.html?dir=asc&amp;order=name">Name</option>
+                    <option value="http://shopper.queldorei.com/index.php/women/dresses.html?dir=asc&amp;order=price">Price</option>
+                </select>
+            </div>
+
+            <div class="toolbar-dropdown">
+                <ul>
+                    <li class="selected"><a href="http://shopper.queldorei.com/index.php/women/dresses.html?dir=asc&amp;order=position">Position</a></li>
+                    <li><a href="http://shopper.queldorei.com/index.php/women/dresses.html?dir=asc&amp;order=name">Name</a></li>
+                    <li><a href="http://shopper.queldorei.com/index.php/women/dresses.html?dir=asc&amp;order=price">Price</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="sort-order">
+            <a href="http://shopper.queldorei.com/index.php/women/dresses.html?dir=desc&amp;order=position" title="Set Descending Direction"><img src="http://shopper.queldorei.com/skin/frontend/shopper/default/images/i_asc_arrow.gif" width="27" height="27" alt="Set Descending Direction" class="v-middle"/></a>
+        </div>
+
+        <p class="view-mode">
+            <label>View</label>
+            {% if app.request.query.all.mode|default('grid')|lower == 'list' %}
+                <a href="{{ path('nilead.frontend.product.listing_by_category', app.request.attributes.all._route_params|merge(app.request.query.all)|merge({'mode': 'grid'})) }}" title="Grid" class="grid">Grid</a>
+                <strong title="List" class="list">List</strong>
+            {% else %}
+                <strong title="Grid" class="grid">Grid</strong>
+                <a href="{{ path('nilead.frontend.product.listing_by_category', app.request.attributes.all._route_params|merge(app.request.query.all)|merge({'mode': 'list'})) }}" title="List" class="list">List</a>
+            {% endif %}
+        </p>
+
+        <div class="limiter toolbar-switch">
+            <div class="toolbar-title">
+                <label>Show</label>
+                {% if app.request.query.all.limit is not defined %}
+                    {% set limit = 6 %}
+                {% else %}
+                    {% set limit = app.request.query.all.limit %}
+                {% endif %}
+                <span class="current">{{ limit }}</span>
+
+                <select onchange="setLocation(this.value)">
+                    <option selected="selected" value="http://shopper.queldorei.com/index.php/women/dresses.html?limit=9">9</option>
+                    <option value="http://shopper.queldorei.com/index.php/women/dresses.html?limit=15">15</option>
+                    <option value="http://shopper.queldorei.com/index.php/women/dresses.html?limit=30">30</option>
+                </select>
+                per page
+            </div>
+
+            <div class="toolbar-dropdown">
+                <ul>
+                    <li{% if limit == 6 %} class="selected"{% endif %}><a href="{{ path('nilead.frontend.product.listing_by_category', app.request.attributes.all._route_params|merge(app.request.query.all)|merge({'limit': 6})) }}">6</a></li>
+                    <li{% if limit == 9 %} class="selected"{% endif %}><a href="{{ path('nilead.frontend.product.listing_by_category', app.request.attributes.all._route_params|merge(app.request.query.all)|merge({'limit': 9})) }}">9</a></li>
+                    <li{% if limit == 12 %} class="selected"{% endif %}><a href="{{ path('nilead.frontend.product.listing_by_category', app.request.attributes.all._route_params|merge(app.request.query.all)|merge({'limit': 12})) }}">12</a></li>
+                    <li{% if limit == 15 %} class="selected"{% endif %}><a href="{{ path('nilead.frontend.product.listing_by_category', app.request.attributes.all._route_params|merge(app.request.query.all)|merge({'limit': 15})) }}">15</a></li>
+                    <li{% if limit == 30 %} class="selected"{% endif %}><a href="{{ path('nilead.frontend.product.listing_by_category', app.request.attributes.all._route_params|merge(app.request.query.all)|merge({'limit': 30})) }}">30</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    {% include 'NileadWebBundle:Frontend/Product/Listing:_pagination.html.twig' %}
+</div>
